@@ -16,8 +16,8 @@
 				"color": "#4169e1"
 			}
 		],
-		"dateAdded": 1700417959,
-		"dateLastModified": 1700417959
+		"dateAdded": 1700422331,
+		"dateLastModified": 1700422331
 	},
 	"spell": [
 		{
@@ -357,6 +357,260 @@
 			]
 		},
 		{
+			"name": "Evanescent Graffiti",
+			"source": "ThePrestige",
+			"page": 22,
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a paintbrush"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24,
+						"upTo": true
+					}
+				},
+				{
+					"type": "permanent",
+					"ends": [
+						"dispel"
+					]
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You project a still image of characters, symbols, and/or pictures on the surface of an object, a structure, or the floor within range. You may arrange the composition of the illusion’s image however you desire, including colors and dimly glowing parts (emitting 10 feet of bright light, and another 10 feet of dim light). The illusion must fit an area no larger than 20 feet by 20 feet, and remains projected on the affected surface for the duration.",
+				"If this spell is cast as a ritual, the image becomes permanent until dispelled."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"PRM",
+				"LGT",
+				"OBJ"
+			]
+		},
+		{
+			"name": "False Reflection",
+			"source": "ThePrestige",
+			"page": 22,
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Until the spell ends, you cause a reflective surface (or part of it) no larger than 30 feet across to display a form of your choice whenever a creature’s image is reflected by the affected surface. You can choose to have the form be the same as the original reflection, except with minor cosmetic changes, or something more drastic (to the limits of imagination), but all creatures’ reflections will be changed the same way unless you take an action to change the parameters of the effect. Creatures that normally have no reflections will have their images displayed as if they do have reflections."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"OBJ"
+			]
+		},
+		{
+			"name": "Illusory Intervention",
+			"source": "ThePrestige",
+			"page": 22,
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "when a creature (other than yourself) is hit by a melee attack"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"As a creature you can see within range (other than yourself) is about to be hit by an attacker you can also see, you project a distracting or misdirecting illusion in the defender’s space that causes the attacker to miss. The attacker must make a Wisdom saving throw. On a failed save, it must reroll the attack with disadvantage. On a successful save, the attack is unaffected by this spell."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Illusory Soldier",
+			"source": "ThePrestige",
+			"page": 22,
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You create a solid illusory construct that follows your mental commands. The construct has the stats of a Guard NPC (Monster Manual Appendix B) except it is a construct instead of a humanoid, it is immune to the {@condition charmed}, {@condition frightened}, {@condition petrified}, and {@condition stunned} conditions, it is unaligned, and it has no personality, memories, or ability to speak. The construct’s outward appearance is as you imagine it to be, within reason. If the construct’s hit points are reduced to 0 or when the spell ends, the construct vanishes along with all of its illusory equipment.",
+				"On each of your turns, you can use a bonus action to mentally command the construct you made with this spell. The construct acts on your initiative, taking actions and moving where you will it to. A general command such as guarding a creature, object, or location can be given, which the construct will continue following until you give it a different command. If no commands are given, the construct will only defend itself against hostile creatures."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a slot of 2nd level or higher, you create two additional constructs per level higher than 1st. You can mentally command only a single construct for a specific action, but a general command can be given to all constructs (within 30 feet) simultaneously"
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"SCL",
+				"SMN",
+				"UBA"
+			]
+		},
+		{
 			"name": "Illustrate Assailant",
 			"source": "ThePrestige",
 			"page": 20,
@@ -630,7 +884,7 @@
 		{
 			"name": "Titanic Image",
 			"source": "ThePrestige",
-			"page": 20,
+			"page": 47,
 			"level": 9,
 			"school": "I",
 			"time": [
@@ -685,7 +939,9 @@
 				]
 			},
 			"miscTags": [
-				"UBA"
+				"SMN",
+				"OBS",
+				"OBJ"
 			]
 		}
 	]
