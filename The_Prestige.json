@@ -16,8 +16,8 @@
 				"color": "#4169e1"
 			}
 		],
-		"dateAdded": 1700417028,
-		"dateLastModified": 1700417028
+		"dateAdded": 1700417959,
+		"dateLastModified": 1700417959
 	},
 	"spell": [
 		{
@@ -241,6 +241,61 @@
 			},
 			"miscTags": [
 				"OBJ"
+			]
+		},
+		{
+			"name": "Deceptive Weapon",
+			"source": "ThePrestige",
+			"page": 22,
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					}
+				}
+			],
+			"entries": [
+				"A melee weapon that you touch appears to grow, elongate, shrink at random intervals to all creatures other than the wielder of the weapon. Until the spell ends, whenever the weapon hits a creature on a melee weapon attack, the target (if it is Large or smaller) must make an Intelligence saving throw. On a failed save, the next melee weapon attack made with the affected weapon against the same target has advantage if the attack is made before the end of the wielder’s next turn."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"savingThrow": [
+				"intelligence"
+			],
+			"miscTags": [
+				"OBJ",
+				"ADV"
 			]
 		},
 		{
