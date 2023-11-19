@@ -571,6 +571,67 @@
 				"UBA",
 				"OBJ"
 			]
+		},
+		{
+			"name": "Titanic Image",
+			"source": "ThePrestige",
+			"page": 20,
+			"level": 9,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You project the image of a creature, object, or structure of your imagining in an unoccupied space within range, and it can be made as large as what can fit in a 1000 foot-long cube (with a minimum length of 50 feet). Physical interaction with the image reveals it to be an illusion, because it is intangible (otherwise it looks and sounds like it is real). If the illusion is a creature’s image, you can take an action to mentally command it to act and move as you desire, with a speed of 60 feet, or fly speed of 120 feet (it maintains the same fly speed in a liquid environment such as underwater). You can also command it to speak or make other noises at a booming volume that can be heard thousands of feet away. If the illusion is an object’s or structure’s image, you can take an action to make cosmetic changes to the illusion, such as color, decorations, inscribed symbols, and paintings. You can also take an action to mentally command it to move as you desire, with a fly speed of 120 feet (it maintains the same fly speed in a liquid environment such as underwater). If the distance between you and the illusion exceeds 1 mile, the spell ends."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"UBA"
+			]
 		}
 	]
 }
