@@ -17,8 +17,8 @@
 				"color": "#4169e1"
 			}
 		],
-		"dateAdded": 1700453611,
-		"dateLastModified": 1700453611
+		"dateAdded": 1700510680,
+		"dateLastModified": 1700510680
 	},
 	"spell": [
 		{
@@ -81,6 +81,77 @@
 			],
 			"areaTags": [
 				"ST"
+			]
+		},
+		{
+			"name": "Clone Craft",
+			"source": "ThePrestige",
+			"page": 26,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a mirror"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You create a solid, illusory duplicate of one Large or smaller beast or humanoid that you touch, that follows your mental commands; the duplicate appears in an unoccupied space of your choice within 10 feet of the target. When the spell ends, the duplicate vanishes.",
+				"On each of your turns, you can use a bonus action to mentally command the duplicate you made with this spell. The duplicate acts on your initiative, taking actions as you will it to. The only commands that can be given to the duplicate are commands to move, speak words of your choice, or physically interact with objects as you direct it (except for attacks or complex interactions such as picking a lock or cooking a meal). If no commands are given, the duplicate takes no actions and simply stays still.",
+				"The duplicate has an AC of 10 + your Dexterity modifier, and is destroyed on a single hit. It ignores all other damage and effects.",
+				"If the duplicate’s distance from you exceeds 30 feet, the duplicate vanishes."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a slot of 5th level or higher, you can duplicate a Huge creature."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"SCL",
+				"SMN",
+				"UBA"
 			]
 		},
 		{
@@ -245,6 +316,51 @@
 			]
 		},
 		{
+			"name": "Deceptive Heist",
+			"source": "ThePrestige",
+			"page": 26,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"As part of the casting of this spell, you pick up an object. As you pick up the object, it becomes {@condition invisible} and a solid, illusory duplicate of the object appears in its original location; to other creatures, unless they were watching closely, it appears as if you never picked up the original object. The duplicate looks, smells, feels, and weighs the same as the original but has no other properties, and vanishes when the spell ends. If the duplicate is heavily damaged or broken, the spell ends."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"OBJ"
+			]
+		},
+		{
 			"name": "Deceptive Weapon",
 			"source": "ThePrestige",
 			"page": 22,
@@ -356,6 +472,176 @@
 			"areaTags": [
 				"C"
 			]
+		},
+		{
+			"name": "Dream Blast",
+			"source": "ThePrestige",
+			"page": 26,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "special"
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You duplicate your choice of any 1st level spell you have prepared that deals acid, cold, fire, lightning, radiant, or necrotic damage, except the effect deals psychic damage instead of any damage types normally dealt and you can exclude a creature of your choice that you can see from being affected by the spell. Any saving throws that would normally be made become Wisdom saving throws. The spell chosen for duplication must have a casting time of 1 action and a duration of instantaneous."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a slot of 2nd level or higher, you can choose to either increase the maximum level of spell that you recreate and/or treat the spell as if cast with a higher level slot. For example, casting this spell with a 5th level slot will let you duplicate a prepared fireball (a 3rd level spell) as if it were cast with a 4th level slot. The effective level of the spell being duplicated must be one level less than the spell slot spent for this spell."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			},
+			"damageInflict": [
+				"psychic"
+			],
+			"spellAttack": [
+				"O"
+			],
+			"abilityCheck": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SCL"
+			]
+		},
+		{
+			"name": "Duplicate Decoy",
+			"source": "ThePrestige",
+			"page": 26,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"As part of the casting of this spell you move 5 feet (+5 feet per size category you currently are beyond Medium). You become {@condition invisible} for the duration while an intangible, illusory duplicate is created in the original space from which you began casting this spell; to all other creatures, it appears as if you never left the original location from which you began casting this spell. If you make an attack or cast a spell, the spell ends, causing you to become visible and your duplicate to vanish.",
+				"The duplicate’s AC equals 10 + your Dexterity modifier, and it is destroyed on a hit. It ignores all other damage and effects. The duplicate can take no actions other than moving; you can take a bonus action to mentally command the illusory duplicate to move up to your speed."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"SMN",
+				"UBA"
+			]
+		},
+		{
+			"name": "Emergency Decoy",
+			"source": "ThePrestige",
+			"page": 27,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "when you are hit by an attack"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"As part of the casting of this spell you move 5 feet (+5 feet per size category you currently are beyond Medium). You become {@condition invisible} until the end of your next turn, and a solid, illusory duplicate is created in the original space from which you began casting this spell; to all other creatures, it appears as if you never left the original location from which you began casting this spell. The duplicate takes the hit instead and vanishes. If you make an attack or cast a spell, the spell ends, causing you to become visible."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlcok",
+						"source": "PHB"
+					}
+				]
+			}
 		},
 		{
 			"name": "Evanescent Graffiti",
@@ -471,6 +757,299 @@
 					},
 					{
 						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"OBJ"
+			]
+		},
+		{
+			"name": "Far Screen",
+			"source": "ThePrestige",
+			"page": 27,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You project the image of a flat circular, ovular, or rectangular screen no larger than 10 feet across within range. A second screen appears within 5 feet of a creature that you are familiar with, to a maximum distance of 10 miles away from you. The two screens relay sight and sound to each other as if they were different sides of an open window."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a slot of 3rd level or higher, the maximum distance of the second screen is multiplied by 10 per level higher than 2nd."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Fatal Vision",
+			"source": "ThePrestige",
+			"page": 27,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You twist the senses of one creature you can see within range, causing the target to experience itself dying in some way for a brief moment. The target must make a Wisdom saving throw. On a failed save, the target takes {@damage 4d6} psychic damage and has disadvantage on attack rolls and ability checks until the end of its next turn. On a successful save, the target takes half damage."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"OBJ"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Fraudulent Resizing",
+			"source": "ThePrestige",
+			"page": 27,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You cause one creature you can see within range to appear as if it were up to two sizes larger or up to two sizes smaller than its actual size. Physical interaction reveals the nature of the illusion.",
+				"Alternatively, you can cause one wieldable object you can see within range to appear as if it were larger, to a maximum size that would fit within a 10-foot radius sphere. Physical interaction reveals the nature of the illusion."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"OBJ"
+			]
+		},
+		{
+			"name": "Garble Text",
+			"source": "ThePrestige",
+			"page": 27,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a writing implement"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"Written text in a single book, scroll, or on a patch of surface no larger than 100 feet in any direction is made to appear as if written in an unintelligible language or your choice of coded pattern (other types of writing medium may be targeted, at the DM’s discretion). This will not work on spellbooks or magically warded texts. You can take an action to end this spell or to permit any number of creatures of your choice to either read the text normally (or to remove the permission). Creatures with truesight can read the affected text normally regardless of permission."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"OBJ"
+			]
+		},
+		{
+			"name": "Globalize Text",
+			"source": "ThePrestige",
+			"page": 27,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a writing implement"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"Written text in a single book, scroll, or on a patch of surface no larger than 100 feet in any direction is made to appear as if written in a language known by the reader (other types of writing medium may be targeted, at the DM’s discretion). This will not work on spellbooks or magically warded texts. You can take an action to end this spell."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
 						"source": "PHB"
 					},
 					{
@@ -1322,6 +1901,70 @@
 			]
 		},
 		{
+			"name": "Temporary Restoration",
+			"source": "ThePrestige",
+			"page": 25,
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "a drop of adhesive liquid, which the spell consumes",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You gather shadow substance to fill in the cracks and replace the missing pieces of a damaged nonmagical object or structure (or part of it) no larger than a 20-foot cube. The object or structure functions as if whole and undamaged for the duration. You can take an action to dismiss the spell.",
+				"If this spell is cast as a ritual, the duration is extended to a maximum of 8 hours."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"OBJ"
+			]
+		},
+		{
 			"name": "Tiny Clone",
 			"source": "ThePrestige",
 			"page": 20,
@@ -1454,6 +2097,200 @@
 				"OBS",
 				"OBJ"
 			]
+		},
+		{
+			"name": "Transient Shackles",
+			"source": "ThePrestige",
+			"page": 25,
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You create solid quasi-real shackles connected to the ground by chains, that attempt to ensnare the legs of another creature. One Large or smaller creature you can see within a range must make a Dexterity saving throw. On a failed save, the creature is {@condition restrained} until the end of its next turn. The {@condition restrained} creature can take an action on its turn to break free from the shackles with a Strength ability check made against your spellcasting DC. The spell ends immediately if the creature escapes from the shackles. The shackles and chains vanish when the spell ends."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a slot of 4th level or higher, you can target a Huge creature. When you cast this spell with a slot of 7th level or higher, you can target a Gargantuan creature (no larger than 30 ft. by 30 ft.)."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					}
+				]
+			},
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrow": [
+				"strength",
+				"dexterity"
+			],
+			"miscTags": [
+				"SGT",
+				"SCL",
+				"OBJ"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "True Reflection",
+			"source": "ThePrestige",
+			"page": 25,
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 100
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Until the spell ends, you cause a reflective surface (or part of it) no larger than 30 feet across to display the true form of any creature whose image is reflected. Creatures that normally have no reflection will also have the reflections of their true forms displayed."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"OBJ"
+			]
+		},
+		{
+			"name": "Winged Messenger",
+			"source": "ThePrestige",
+			"page": 25,
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "miles",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a folded paper bird"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You create an intangible, illusory construct resembling a Tiny flying creature or object of your imagining; the construct immediately flies towards one creature that you are familiar with when you finish casting. The construct can pass through solid obstructions but is destroyed if it attempts to pass through a dead magic zone, antimagic field, or barrier of magical force. The construct flies at a speed of 10 miles per hour, and when it arrives within 5 feet of the target, it delivers an audible message (up to the maximum safe volume for the listeners) that you recorded during the spell’s casting (up to a maximum of 1 minute of recorded speech). When the message is completely delivered, or the construct is destroyed, or the duration ends, the spell ends and the construct vanishes.",
+				"If this spell is cast as a ritual, you can record up to 10 minutes of audible speech during the spell’s casting."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			}
 		}
 	]
 }
