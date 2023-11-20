@@ -16,8 +16,8 @@
 				"color": "#4169e1"
 			}
 		],
-		"dateAdded": 1700422331,
-		"dateLastModified": 1700422331
+		"dateAdded": 1700453611,
+		"dateLastModified": 1700453611
 	},
 	"spell": [
 		{
@@ -680,6 +680,348 @@
 			]
 		},
 		{
+			"name": "Image Capture",
+			"source": "ThePrestige",
+			"page": 23,
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "permanent",
+					"ends": [
+						"dispel"
+					]
+				}
+			],
+			"entries": [
+				"You touch a wieldable crystal object and store within it a still image of everything you can see when you cast this spell. Any number of still images can be stored per object, and until dispelled, the spell displays the images visibly within the object. As an action, the holder of such an object can cause one of the stored images to be displayed by itself, taking up as much visible space within the crystal as desired; the chosen image remains displayed for up to 1 minute or until a bonus action is used to have it shift to the next stored image in the order they were recorded (the last image loops back to the first). The quality of the image will vary based on the size and transparency of the object."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"PRM",
+				"UBA",
+				"OBJ"
+			]
+		},
+		{
+			"name": "Invisible Ink",
+			"source": "ThePrestige",
+			"page": 23,
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "permanent"
+				}
+			],
+			"entries": [
+				"As part of the casting of this spell, you write, paint, or draw upon a medium, stopping for no longer than a minute. The words, symbols, and/or pictures that you produce while casting the spell glow with a dim light during the casting, and become {@condition invisible} when the casting is completed. You can complete the casting at any time after you begin, to a maximum casting time of 1 hour. The words, symbols, and/or pictures affected by this spell will reveal themselves when a condition of your choice is fulfilled (ex. when the reader speaks a password), and become {@condition invisible} again when a condition of your choice is fulfilled (ex. after a duration of time has passed)."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"PRM",
+				"OBJ"
+			]
+		},
+		{
+			"name": "Lesser Shadow Clone",
+			"source": "ThePrestige",
+			"page": 23,
+			"level": 0,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You create a solid, illusory duplicate of yourself that follows your mental commands; the duplicate appears in an unoccupied space of your choice within range. When the spell ends, the duplicate vanishes. The duplicate’s equipment is composed of nonmagical duplicates of the equipment you were wearing or wielding when you cast this spell (make adjustments to the stats as needed). The equipment vanishes if separated from the duplicate for more than 1 minute or if heavily damaged.",
+				"On each of your turns, you can use a bonus action to mentally command the duplicate you made with this spell. The duplicate acts on your initiative, taking actions as you will it to. The only commands that can be given to the duplicate are commands to move, speak words of your choice, or physically interact with objects as you direct it (except for attacks or complex interactions such as picking a lock or cooking a meal). If no commands are given, the duplicate takes no actions and simply stays still.",
+				"The duplicate has an AC of 10 + your Dexterity modifier, and is destroyed on a single hit. It ignores all other damage and effects. ",
+				"If the duplicate’s distance from you exceeds 30 feet, the duplicate vanishes."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a slot of 2nd level or higher, you create two additional duplicates per level higher than 1st. You can mentally command only a single duplicate for a specific action, but a general command can be given to all duplicates simultaneously."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"SMN",
+				"UBA",
+				"OBJ"
+			]
+		},
+		{
+			"name": "Music Mark",
+			"source": "ThePrestige",
+			"page": 23,
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You cause the air around one creature you can see within range to fill with the sound of a song or instrumental composition, which you choose from your own memories. The creature must make a Wisdom saving throw. On a failed save, the target carries the sound of music wherever it goes for the duration, effectively causing all of the target’s attempts to move silently to automatically fail until the spell ends. "
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SGT",
+				"OBJ"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Nightmare Riposte",
+			"source": "ThePrestige",
+			"page": 24,
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "when you are hit by an attack"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"As retribution for an attack upon you, the attacker, if within range (you do not need line of sight for this spell), must make a Wisdom saving throw. On a failed save, the attacker experiences a brief vision of nightmarish terrors that causes it to be {@condition frightened} of you, moving as far away from you as possible until the end of its next turn."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Painted Pet",
+			"source": "ThePrestige",
+			"page": 24,
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "Specially treated ink or paint worth at least 1gp"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You convert a freshly completed drawing/painting of a CR 1 or lower beast into an illusory construct that leaps off the medium (any solid object that can sustain ink/paint on its surface) that it was illustrated upon and obeys your mental commands. You complete the drawing/painting as part of the casting of this spell (you must have an almost completed drawing ready for the casting). Until the spell ends, the drawing/painting becomes a construct with all the stats of the beast except for its creature type (which is now construct), outward appearance (appears as it was drawn) and hit points (1 hit point maximum); it is also immune to the {@condition charmed}, {@condition frightened}, {@condition petrified}, and {@condition stunned} conditions. The spell ends if the construct’s hit points are reduced to 0. When the spell ends, the construct vanishes, leaving behind drops of spilled ink/paint.",
+				"On each of your turns, you can use a bonus action to mentally command the construct you made with this spell. The construct acts on your initiative, taking actions and moving where you will it to. A general command such as guarding a creature, object, or location can be given, which the construct will continue following until you give it a different command. If no commands are given, the construct will only defend itself against hostile creatures."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a slot of 2nd level or higher, the maximum CR of the beast you can replicate as a construct is increased by 1 per level higher than 1st."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"SCL",
+				"SMN",
+				"UBA",
+				"OBJ"
+			]
+		},
+		{
 			"name": "Phantom Assault",
 			"source": "ThePrestige",
 			"page": 20,
@@ -754,6 +1096,57 @@
 			]
 		},
 		{
+			"name": "Phantom Smite",
+			"source": "ThePrestige",
+			"page": 24,
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"SPECIAL: You must have the Divine Smite feature to cast this spell.",
+				"A floating, solid, illusory duplicate of a weapon that you are wielding appears in an unoccupied space you can see within range, and you make a melee weapon attack with the illusion against a creature within 5 feet of it. On a hit, you deal damage equal to the original weapon’s damage die, excluding its damage bonuses and magical properties (if any); this is treated as hitting with a magic weapon for the purpose of overcoming damage resistance. You can apply your Divine Smite feature to this attack."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					}
+				]
+			},
+			"spellAttack": [
+				"M"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
 			"name": "Shadow Tool",
 			"source": "ThePrestige",
 			"page": 20,
@@ -811,6 +1204,120 @@
 			},
 			"miscTags": [
 				"UBA"
+			]
+		},
+		{
+			"name": "Silent Speak",
+			"source": "ThePrestige",
+			"page": 24,
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					}
+				}
+			],
+			"entries": [
+				"When a willing creature that you touch attempts to speak, instead of sound coming from the creature, its words appear as floating illusory text characters made of light, no larger than a few inches each, that are only visible to those that the creature wishes to communicate with."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a slot of 2nd level or higher, you can add another target for the spell per level higher than 1st. In addition, when you cast this spell with a slot of 4th level or higher, the text characters appear to the viewer in a language that they understand, even if there are multiple viewers that understand different languages."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"SCL"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Sudden Displacement",
+			"source": "ThePrestige",
+			"page": 24,
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "when you are hit by an attack"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"As a creature you can see is about to hit you with an attack, you cause the image of your actual location to be displaced, forcing the attack roll to be rerolled with disadvantage."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
