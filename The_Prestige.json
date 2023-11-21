@@ -17,8 +17,8 @@
 				"color": "#4169e1"
 			}
 		],
-		"dateAdded": 1700595589,
-		"dateLastModified": 1700595589
+		"dateAdded": 1700597717,
+		"dateLastModified": 1700597717
 	},
 	"spell": [
 		{
@@ -472,6 +472,57 @@
 			"areaTags": [
 				"C"
 			]
+		},
+		{
+			"name": "Dream Avatar",
+			"source": "ThePrestige",
+			"page": 46,
+			"level": 9,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You create a solid, illusory duplicate of an {@condition unconscious} beast or humanoid you see within range; the duplicate appears in the same space as the original creature, just over the creature’s {@condition unconscious} body. The duplicate has all the statistics of the {@condition unconscious} creature (except for its type, which is construct) and is controlled by the {@condition unconscious} creature’s mind. The duplicate has full hit points, wears duplicate equipment that functions the same as the original, and any ongoing effects being applied on the creature are not present on the duplicate. The duplicate acts on the same initiative as the {@condition unconscious} creature.",
+				"If the {@condition unconscious} creature dies or awakens, the spell ends. If the duplicate’s hit points are reduced to 0, the spell ends. The duplicate and all of its equipment vanish when the spell ends"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					}
+				]
+			}
 		},
 		{
 			"name": "Dream Blast",
@@ -1476,6 +1527,65 @@
 			]
 		},
 		{
+			"name": "Mystery Maze",
+			"source": "ThePrestige",
+			"page": 46,
+			"level": 9,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "a black onyx worth at least 100 gp, which the spell consumes",
+					"consume": true,
+					"cost": 10000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You create an illusory maze of 30 ft. high solid, opaque walls that constantly shifts its turns and paths. The walls are 1 foot thick, have 20 hit points per inch of thickness, and AC 13. The corridors are 5 feet to 10 feet wide. When this spell is cast, you can have all friendly creatures within the affected area separated by walls from nonfriendly creatures within the affected area. Huge or larger creatures are entrapped by walls if they are within the affected area.",
+				"You and friendly creatures can move normally through the affected area. A non-friendly creature must make an Intelligence saving throw when it enters or starts a turn within the affected area. On a successful save, the creature must spend 10 feet of movement for every 5 feet moved through the affected area. On a failed save, the creature must spend 15 feet of movement for every 5 feet moved through the affected area. If a friendly creature (including you) in the affected area moves within sight of a non-friendly creature, a wall will immediately separate them, blocking contact and line of sight.",
+				"When the spell ends, the maze vanishes."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"savingThrow": [
+				"intelligence"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
 			"name": "Nightmare Riposte",
 			"source": "ThePrestige",
 			"page": 24,
@@ -1783,6 +1893,65 @@
 			],
 			"areaTags": [
 				"ST"
+			]
+		},
+		{
+			"name": "Power Word Hallucinate",
+			"source": "ThePrestige",
+			"page": 46,
+			"level": 8,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You speak a word of power that causes one creature you can see within range to have its senses assaulted by an illusionary environment that only it can see and hear. If the creature has 150 or fewer hit points, it is {@condition blinded} and {@condition deafened}. Otherwise, the spell has no effect.",
+				"The target can make a Wisdom saving throw at the end of its every turn. On a successful save, the target is no longer {@condition blinded} and {@condition deafened}."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"conditionInflict": [
+				"blinded",
+				"deafened"
+			],
+			"savingThrow": [
+				"wisdom"
 			]
 		},
 		{
@@ -2284,6 +2453,77 @@
 			},
 			"miscTags": [
 				"OBJ"
+			]
+		},
+		{
+			"name": "Vertigo Storm",
+			"source": "ThePrestige",
+			"page": 46,
+			"level": 8,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 100
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "a multi-colored crystal, worth at least 100 gp, which the spell consumes)",
+					"consume": true,
+					"cost": 10000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You create a field of twisting images, sounds, and gravitational sensations in a 30-foot radius sphere within range. Every creature within the affected area when this spell is cast must make a Wisdom saving throw; on a failed save, the creature falls {@condition prone}. The following effects are applied until the spell ends:",
+				{
+					"type": "list",
+					"items": [
+						"Attacks made against and attacks made by creatures within the affected area have disadvantage.",
+						"Dexterity saving throws made by creatures within the affected area against effects that they must see to avoid have disadvantage.",
+						"Perception checks made within the affected area to perceive sights or sounds have disadvantage.",
+						"Perception checks made by creatures outside the affected area to perceive sights and sounds originating from within the affected area have disadvantage.",
+						"A creature entering or starting its turn within the affected area must make a Wisdom saving throw; on a failed save, the creature falls {@condition prone}.",
+						"For every 10 feet that a creature moves through the affected area, it must make a Wisdom saving throw; on a failed save, the creature falls {@condition prone}."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
