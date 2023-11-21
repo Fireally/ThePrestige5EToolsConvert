@@ -1,5 +1,4 @@
 {
-	"siteVersion": "1.193.0",
 	"_meta": {
 		"sources": [
 			{
@@ -2290,6 +2289,65 @@
 						"source": "PHB"
 					}
 				]
+			}
+		},
+		{
+			"name": "Phantom Battlefield",
+			"level": 9,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Reality warps around you as unattended objects, structures, and the environment within 120 feet vanish, transforming into an environment of your imagining, including hazards such as magma flows, quicksand pits, or deep crevices; unusual terrain such as floating platforms or variable gravity floors can also be included in the imagined environment. Atmospheric conditions within the imagined environment however remain the same as they were before the spell was cast.",
+				"Creatures that would be in hazardous terrain are immediately teleported to the nearest unoccupied safe location. The imagined environment must have enough locations of non-hazardous terrain for every creature in the affected area to be in. When the spell ends, the environment reverts back to how it was before the spell was cast, and any damage to the imagined environment has no effect on the reverted objects, structures, and environment."
+			],
+			"source": "ThePrestige",
+			"page": 47,
+			"components": {
+				"v": true,
+				"s": true
 			}
 		}
 	]
