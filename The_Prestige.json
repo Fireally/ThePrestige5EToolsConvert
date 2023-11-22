@@ -17,10 +17,77 @@
 				"color": "#4169e1"
 			}
 		],
-		"dateAdded": 1700620883,
-		"dateLastModified": 1700620883
+		"dateAdded": 1700622200,
+		"dateLastModified": 1700622200
 	},
 	"spell": [
+		{
+			"name": "Ancient Image",
+			"source": "ThePrestige",
+			"page": 39,
+			"level": 5,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 1000
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a clock or pendulum"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You cause all objects and structures of your choice that you can see within range to appear as they did up to 2,000 years ago (you choose how many years when you cast this spell). Physical interaction with the affected targets reveals their appearance to be an illusion. You can take an action to change the number of years chosen for the spell’s effect or to exclude/re-include an object or structure in the spell’s effect. You must choose when you cast the spell whether to have the spell’s affected area remain fixed or move with you."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a slot of 6th level or higher, then you double the maximum number of years per level higher than 5th (4,000 at 6th, 8,000 at 7th, 16,000 at 8th, 32,000 at 9th)"
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"OBJ"
+			]
+		},
 		{
 			"name": "Assisting Clone",
 			"source": "ThePrestige",
@@ -277,6 +344,54 @@
 			]
 		},
 		{
+			"name": "Clone Swarm",
+			"source": "ThePrestige",
+			"page": 39,
+			"level": 5,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Eight illusory duplicates of yourself appear, each one in an unoccupied space you can see within 10 feet of a creature you can see within range. Each duplicate immediately makes a melee weapon attack against the target (if the target is within range), using a nonmagical duplicate of a weapon that you are currently wielding; the attack roll uses your spell attack modifier. After the attacks are made, the duplicates vanish, along with any equipment that was duplicated with them.",
+				"Each duplicate’s AC equals 10 + your Dexterity modifier, and it is destroyed on a hit. The duplicates ignore all other damage and effects. "
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
 			"name": "Color Cloud",
 			"source": "ThePrestige",
 			"page": 42,
@@ -355,7 +470,7 @@
 			"name": "Communication Circle",
 			"source": "ThePrestige",
 			"page": 40,
-			"level": 4,
+			"level": 5,
 			"school": "I",
 			"time": [
 				{
@@ -4027,6 +4142,72 @@
 			]
 		},
 		{
+			"name": "Wall of Invisibility",
+			"source": "ThePrestige",
+			"page": 39,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You create an {@condition invisible}, intangible, illusory wall in unoccupied space within range. The wall appears in any orientation you choose: horizontally, vertically, or diagonally. It can be free floating, or it can rest on a solid surface. The wall can be up to 60 feet long, 30 feet high, and 1 inch thick. When the spell ends, the wall vanishes.",
+				"You can choose one of the following effects when you cast this spell.",
+				{
+					"type": "list",
+					"items": [
+						"Creatures on one side of the wall (of your choice) can not see creatures on the other side of the wall, as if the creatures on the other side are {@condition invisible}.",
+						"Creatures on both sides of the wall can not see creatures on the other side of the wall, as if the creatures on the other side are {@condition invisible}."
+					]
+				},
+				"You may choose to let creatures of your choice on either side of the wall to be visible to creatures on the other side. "
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"W"
+			]
+		},
+		{
 			"name": "Wall of Misdirection",
 			"source": "ThePrestige",
 			"page": 43,
@@ -4152,6 +4333,83 @@
 					}
 				]
 			}
+		},
+		{
+			"name": "Zone of Invisibility",
+			"source": "ThePrestige",
+			"page": 39,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "powdered silver worth at least 1 gp, which the spell consumes",
+					"consume": true,
+					"cost": 100
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You create a fixed area in which creatures are rendered {@condition invisible}, fitting within a 20-foot cube. Any creature that is within the affected area when you cast this spell is rendered {@condition invisible} until it leaves the area. Any creature that enters the affected area is rendered {@condition invisible} until it leaves the area. Equipment and objects that are worn or carried by affected creatures are also rendered {@condition invisible}. If a creature within the affected area attacks or casts a spell, it becomes unaffected by the spell until the end of its next turn.",
+				"If you cast this spell as a ritual, you can add one or more of the following effects.",
+				{
+					"type": "list",
+					"items": [
+						"Only creatures that fulfill certain conditions are affected by the spell, or unaffected.",
+						"Creatures affected by the spell can be seen by creatures that fulfill certain conditions.",
+						"Creatures within the affected area can see themselves and other creatures within the affected area."
+					]
+				},
+				"If you cast this spell as a ritual, you can make the spell’s duration permanent by instead using silver powder worth at least 100 gp for the material component."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"C"
+			]
 		}
 	]
 }
