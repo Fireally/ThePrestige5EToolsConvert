@@ -17,8 +17,8 @@
 				"color": "#4169e1"
 			}
 		],
-		"dateAdded": 1700689809,
-		"dateLastModified": 1700689809
+		"dateAdded": 1700696487,
+		"dateLastModified": 1700696487
 	},
 	"spell": [
 		{
@@ -200,6 +200,90 @@
 				"SCL",
 				"SMN",
 				"ADV"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Cage of Horrors",
+			"source": "ThePrestige",
+			"page": 33,
+			"level": 3,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You trap a Medium or smaller creature inside an illusory cage of swirling multi-colored mist and horrifying images; the cage is a 5-foot diameter, 10-foot high cylinder with a closed top (and bottom if currently mid-air). The walls of the cage block line of sight, but creatures and objects can pass through it. If the target attempts to exit the cage, it must make a Charisma saving throw. On a failed save, the target stays inside the cage, takes {@damage 4d6 + 16} psychic damage, and is {@condition frightened} (unable to touch the sides of the cage out of fear) until the end of its next turn. On a successful save, the target takes half damage.",
+				"Any creature that attempts to enter the cage must make a Charisma saving throw. On a failed save, the creature stays outside the cage, takes {@damage 4d6} psychic damage, and is {@condition frightened} (unable to touch the sides of the cage out of fear) until the end of its next turn. On a successful save, the target takes half damage.",
+				"If there is no creature inside the cage, the spell ends and the cage vanishes.",
+				"Creatures that are immune to the {@condition frightened} condition are unaffected by this spell."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a slot of 5th level or higher, you can target a Large creature with a cage that is 10 feet in diameter and 20 feet high. When you cast this spell with a slot of 7th level or higher, you can target a Huge creature with a cage that is 15 feet in diameter and 30 feet high."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"damageInflict": [
+				"psychic"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrow": [
+				"charisma"
+			],
+			"abilityCheck": [
+				"wisdom"
+			],
+			"miscTags": [
+				"OBS"
 			],
 			"areaTags": [
 				"ST"
@@ -795,6 +879,66 @@
 			]
 		},
 		{
+			"name": "Deceptive Rescue",
+			"source": "ThePrestige",
+			"page": 33,
+			"level": 3,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "when another creature is hit by an attack"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"When a non-hostile creature you can see within range is about to be hit by an attack, you teleport them to an unoccupied space within 5 feet of you. The target becomes {@condition invisible} for the duration and a solid, illusory duplicate is created in the original space from which the target was teleported; to all other creatures, it appears as if the target never left the original location from which you began casting this spell. The duplicate takes the hit instead and vanishes. If the target makes an attack or casts a spell, the spell ends, causing the target to become visible."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			},
+			"conditionInflict": [
+				"invisible"
+			],
+			"miscTags": [
+				"TP",
+				"OBJ"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
 			"name": "Deceptive Weapon",
 			"source": "ThePrestige",
 			"page": 22,
@@ -905,6 +1049,64 @@
 			],
 			"areaTags": [
 				"C"
+			]
+		},
+		{
+			"name": "Decoy Step",
+			"source": "ThePrestige",
+			"page": 33,
+			"level": 3,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"As part of the casting of this spell you teleport up to 30 feet (at least 5 feet +5 feet per size category you currently are beyond Medium) to an unoccupied space you can see. You become {@condition invisible} for the duration while an intangible, illusory duplicate is created in the original space from which you began casting this spell; to all other creatures, it appears as if you never left the original location from which you began casting this spell. If you make an attack or cast a spell, the spell ends, causing you to become visible and your duplicate to vanish.",
+				"The duplicate’s AC equals 10 + your Dexterity modifier, and it is destroyed on a hit. It ignores all other damage and effects. The duplicate can take no actions other than moving; you can take a bonus action to mentally command the illusory duplicate to move up to your speed."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"TP",
+				"UBA"
 			]
 		},
 		{
@@ -1777,6 +1979,135 @@
 			}
 		},
 		{
+			"name": "Field of Nightmares",
+			"source": "ThePrestige",
+			"page": 33,
+			"level": 3,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 100
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a spotted mushroom"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You invoke frightful images from the psyches of all creatures within 15-foot radius sphere. Every creature that starts its turn or enters the affected area must make a Wisdom saving throw; on a failed save, a creature is {@condition frightened}. Creatures {@condition frightened} by this spell are compelled to move away as far as possible from the center of the affected area until the start of its next turn, even if doing so would provoke opportunity attacks. A {@condition blinded} creature is not immune to this spell, because the images appear in its mind."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Fractured Visage",
+			"source": "ThePrestige",
+			"page": 33,
+			"level": 3,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "a kaleidoscopic crystal worth at least 10gp",
+					"cost": 1000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You warp the visual imagery of all creatures, objects, and structures (including the environment) in a 20-foot radius sphere within range. Attacks made against and attacks made by creatures within the affected area have disadvantage. Dexterity saving throws made by creatures within the affected area against effects that they must see to avoid have disadvantage."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"S"
+			]
+		},
+		{
 			"name": "Fraudulent Resizing",
 			"source": "ThePrestige",
 			"page": 27,
@@ -2403,6 +2734,70 @@
 			]
 		},
 		{
+			"name": "Illustrate Duplicate",
+			"source": "ThePrestige",
+			"page": 34,
+			"level": 3,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "Specially treated ink or paint worth at least 1gp"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You use a writing/painting implement to smear ink/paint across the surface of a medium (any solid object that can sustain ink/paint on its surface) as you cast this spell. The image of one creature you can see appears where you smeared ink/paint, and that image leaps off the medium, and becomes a construct that appears within an unoccupied space within 10 feet of you and exists until the start of your next turn. The spell fails if the mimicked creature’s CR is higher than 1/2 your level, its level is more than two times your level, or its CR is higher than four times your CR.",
+				"The construct has all the stats and appearance of the mimicked creature except for its creature type (which is now construct), alignment (which is now unaligned), ability to communicate (it can’t speak or use telepathy), and hit points (1 hit point maximum). The spell ends if the construct’s hit points are reduced to 0; it is also immune to the {@condition charmed}, {@condition frightened}, {@condition petrified}, and {@condition stunned} conditions. When the spell ends, the construct vanishes, leaving behind drops of spilled ink/paint.",
+				"NOTE: You do not learn the stats of the mimicked creature nor any of its capabilities that you aren’t already familiar with. The construct will know its own capabilities, however it will not have the personality or memories of the original creature.",
+				"You can use a bonus action to mentally command the construct you made with this spell. The construct takes actions and moves where you will it to. A general command such as guarding a creature, object, or location can be given. If no commands are given, the construct will only defend itself against hostile creatures.",
+				"If the construct you made with this spell moves to a space more than 30 feet away from you, the spell ends."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a slot of 4th level or higher, the maximum CR or level of the creature you can replicate as a construct is increased. For each spell slot level beyond 3rd, you add 1 to the creature’s CR versus your level, 2 to the creature’s level versus your level, and 4 to the creature’s CR versus your CR."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"spellAttack": [
+				"M"
+			],
+			"miscTags": [
+				"SCL",
+				"SMN",
+				"UBA"
+			]
+		},
+		{
 			"name": "Image Capture",
 			"source": "ThePrestige",
 			"page": 23,
@@ -2803,6 +3198,64 @@
 			],
 			"areaTags": [
 				"ST"
+			]
+		},
+		{
+			"name": "Mood Haven",
+			"source": "ThePrestige",
+			"page": 34,
+			"level": 3,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You fill the air with music that evokes the memories of willing creatures resting within it, making each creature within it perceive the surrounding environment as the illusory recreation of an environment where the creature feels most comfortable. A creature spending a short rest within the illusory environment maximizes the results of Hit Dice spent to recover hit points, and has the {@condition frightened} and {@condition stunned} conditions removed from it; the creature must spend at least 30 minutes within the illusory environment to gain this benefit for its short rest.",
+				"When you cast this spell, you can choose to have the illusory environment remain still or move with you. If any creature’s rest within the illusory environment is interrupted by violence or some other potentially agitating event, the benefits of the spell are lost for that creature."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"R"
 			]
 		},
 		{
@@ -3526,6 +3979,69 @@
 					},
 					{
 						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Phantom Road",
+			"source": "ThePrestige",
+			"page": 34,
+			"level": 3,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a pair of clean, undamaged shoes"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You project a tangible illusory floor over the ground and obstructions (other than creatures within 30 feet of you). The floor is made of a quasi-real substance, is smooth to the touch, and perfectly insulates against temperature and hazardous materials (such as lava or poison); this effectively transforms difficult terrain or hazardous terrain into normal terrain for movement. All creatures on the affected area when the illusory floor appears (by rising from beneath) are elevated 2 inches by the floor. Creatures partially submerged in the affected area are pushed upwards out of the ground onto the floor.",
+				"The illusory floor moves with you, is 2 inches thick, has an AC of 13, 10 hit points per inch of thickness, and is immune to acid, cold, fire, and poison damage. When the spell ends, the floor vanishes. "
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
 						"source": "PHB"
 					}
 				]
