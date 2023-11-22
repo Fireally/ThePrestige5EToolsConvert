@@ -17,10 +17,132 @@
 				"color": "#4169e1"
 			}
 		],
-		"dateAdded": 1700597717,
-		"dateLastModified": 1700597717
+		"dateAdded": 1700627301,
+		"dateLastModified": 1700627301
 	},
 	"spell": [
+		{
+			"name": "Afterimage Displacement",
+			"source": "ThePrestige",
+			"page": 36,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"As part of the casting of this spell you move up to your speed (minimum 5 feet + 5 feet per size category beyond Medium). An illusory duplicate of you is created in each 5-foot (+5 feet per size category beyond Medium) space that you exit during this movement. If this movement would provoke an opportunity attack, the opportunity attack targets the duplicate that was left in the space from which you provoked the opportunity attack. When you complete the movement, you can teleport to one space of your choice within the path you just traveled, leaving behind a duplicate and replacing the duplicate occupying the space that you teleport to. The replacement is performed seamlessly as to produce no signs of teleportation.",
+				"Each duplicate’s AC equals 10 + your Dexterity modifier, and it is destroyed on a hit. The duplicates ignore all other damage and effects. Each duplicate can take no actions other than moving; you can take a bonus action to mentally command some or all of the illusory duplicates move up to your speed.",
+				"NOTE: It is recommended that each duplicate be given a different number and that the number be written down secretly, revealing it when it is necessary to prove which duplicate you replaced."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Ancient Image",
+			"source": "ThePrestige",
+			"page": 39,
+			"level": 5,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 1000
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a clock or pendulum"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You cause all objects and structures of your choice that you can see within range to appear as they did up to 2,000 years ago (you choose how many years when you cast this spell). Physical interaction with the affected targets reveals their appearance to be an illusion. You can take an action to change the number of years chosen for the spell’s effect or to exclude/re-include an object or structure in the spell’s effect. You must choose when you cast the spell whether to have the spell’s affected area remain fixed or move with you."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a slot of 6th level or higher, then you double the maximum number of years per level higher than 5th (4,000 at 6th, 8,000 at 7th, 16,000 at 8th, 32,000 at 9th)"
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"OBJ"
+			]
+		},
 		{
 			"name": "Assisting Clone",
 			"source": "ThePrestige",
@@ -78,6 +200,66 @@
 				"SCL",
 				"SMN",
 				"ADV"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Cage of Unreality",
+			"source": "ThePrestige",
+			"page": 44,
+			"level": 7,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "100 pieces of agate worth at least 1 gp each, which are arranged in a circle around the target and consumed by the spell",
+					"consume": true,
+					"cost": 10000
+				}
+			},
+			"duration": [
+				{
+					"type": "permanent"
+				}
+			],
+			"entries": [
+				"You force a creature (at 30 hit points or lower) you can see within range into a deep slumber in which the target dreams itself living in an alternate reality of your imagining, which may be partially built using the target’s own memories. The alternate reality can be as pleasant or unpleasant to the target as you choose, and can be designed to fool the target into believing that the alternate reality is the true reality; in this case the target must make an Insight (Wisdom) check opposed by your Deception (Charisma or Intelligence) check to realize that the alternate reality is not real.",
+				"While the target is asleep, it can not be woken by non-magical means, and successful attempts to forcefully wake up the target will force it to make a Wisdom saving throw. On a failed save, the target will take {@dice 12d8} points of psychic damage and its memories will be damaged in some way (at the DM’s discretion). On a successful save, the target takes half damage.",
+				"The target does not need to eat or drink while affected by this spell, and does not age. If the target rejects the reality that it has been trapped in, then the target can make a Charisma saving throw once per hour. When the target has succeeded on three consecutive Charisma saving throws against this spell, the spell ends and the target wakes up. "
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"wisdom",
+				"charisma"
+			],
+			"abilityCheck": [
+				"wisdom"
 			],
 			"areaTags": [
 				"ST"
@@ -217,6 +399,188 @@
 			]
 		},
 		{
+			"name": "Clone Swarm",
+			"source": "ThePrestige",
+			"page": 39,
+			"level": 5,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Eight illusory duplicates of yourself appear, each one in an unoccupied space you can see within 10 feet of a creature you can see within range. Each duplicate immediately makes a melee weapon attack against the target (if the target is within range), using a nonmagical duplicate of a weapon that you are currently wielding; the attack roll uses your spell attack modifier. After the attacks are made, the duplicates vanish, along with any equipment that was duplicated with them.",
+				"Each duplicate’s AC equals 10 + your Dexterity modifier, and it is destroyed on a hit. The duplicates ignore all other damage and effects. "
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Color Cloud",
+			"source": "ThePrestige",
+			"page": 42,
+			"level": 6,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a multi-colored glass lens"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You create a cloud of swirling white gas and multi-colored patterns of light inside a 20-foot radius sphere within range. Every creature that is within the spell’s area when the cloud appears, enters the cloud, or ends a turn in the cloud must make a Wisdom saving throw. In a failed save, a creature becomes {@condition charmed} until the end of its next turn. While {@condition charmed} by this spell, the creature is {@condition incapacitated} and has a speed of 0.",
+				"If an affected creature takes any damage or someone takes an action to shake the creature out of its stupor, the creature is no longer {@condition charmed}.",
+				"You can take a bonus action to move the cloud up to 10 feet on your turn. The cloud heavily obscures everything within its affected area."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"conditionInflict": [
+				"charmed",
+				"incapacitated"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"UBA",
+				"OBS"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Communication Circle",
+			"source": "ThePrestige",
+			"page": 40,
+			"level": 5,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "powdered gemstones worth at least 30 gp"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You draw out a circle of glyphs and sigils with a 5 foot radius as part of the casting of this spell. When the spell activated, the circle begins to glow, emitting bright illumination out to 15 feet and dim illumination for another 15 feet. While the spell is active, a creature standing within the circle can mentally command the circle to request a connection with another existing circle within the same plane, if they know the location of the other circle (or at least the general area where it is located, within a 1000-foot radius). If there is more than one communication circle in the desired area, then the creature initiating the connection acquires a mental image of all the different circles’ locations and can choose one of them.",
+				"After the request for connection is made, another creature must accept the request at the other circle’s location (or within 30 feet of it); request acceptance may have different conditions such as a spoken password or touching the inside of the circle while making a mental command (chosen by the caster). If the connection is successful, the other circle glows with activation and the creature that initiated the connection can choose one of the following options, which is made known to the receiver before the request is accepted (usually by the way the circle glows, pulsates, or sounds).",
+				{
+					"type": "list",
+					"items": [
+						"Creatures standing in one circle can verbally communicate with creatures standing in the other circle. The initiator of the connection may request to include visual input in the connection, and if the receiver at the other circle accepts the request, the creatures at each circle see the environment around them transition into a misty gray void; intangible illusory images of the creatures and the circles that they are standing on appear in the void, within 10 feet of each other, and visible to each creature in both circles. The images move just as the creatures in the circles move. The creatures in the circles have not actually moved anywhere but can only see or hear each other in the illusion of the void; to creatures outside of the circles, the creatures inside the circles appear to be speaking without sound to an unseen listener",
+						"An intangible illusory image of the creature initiating the connection appears standing on the other circle; the image moves just as the initiator moves. The creature initiating the connection sees the environment around transform into a view of the environment around the other circle, and can communicate with creatures near the other circle’s location as if actually standing on the other circle."
+					]
+				},
+				"The connection can be ended by creatures as a bonus action at either end with a spoken password or mental command given while standing on a circle, at which point the spell ends. If there are no creatures in a circle for more than 1 minute, the spell ends.",
+				"If this spell is cast as a ritual, the required cost of the material component increases to 300 gp (doubled every time 5 feet is added to the radius - ex. 2,400 gp for 20-ft. radius), and the circle becomes permanently active (but only glows when used). A permanent circle can connect with multiple circles at the same time if desired, and instead of the spell ending for a permanent circle, connections are cut."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
 			"name": "Counter Clone",
 			"source": "ThePrestige",
 			"page": 21,
@@ -314,6 +678,76 @@
 			"miscTags": [
 				"OBJ"
 			]
+		},
+		{
+			"name": "Death’s Tale",
+			"source": "ThePrestige",
+			"page": 36,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "a lapis lazuli, worth at least 10 gp, which the spell consumes",
+					"consume": true,
+					"cost": 1000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You touch a corpse, and an intangible illusion is projected within 30 feet of the corpse. The illusion reveals the events of the final minute leading to the death of the creature, played out in motion as if seeing the memories of a witness that was present at the scene of death. You can play the death scene at any moment within the minute of the scene, rewinding, pausing, or moving the imagery forward in time as an action. "
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			}
 		},
 		{
 			"name": "Deceptive Heist",
@@ -474,6 +908,50 @@
 			]
 		},
 		{
+			"name": "Divine Image",
+			"source": "ThePrestige",
+			"page": 45,
+			"level": 8,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a vial of holy or unholy water, which is poured onto your head)"
+			},
+			"duration": [
+				{
+					"type": "special"
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You beseech a deity to appear, and if the deity agrees to do so, the deity arrives in the form of an intangible, illusory representation that is either set upon the ground or freely floats in midair (the deity chooses). The duplicate may be as large as a size fitting within a 60-foot cube. Until the spell ends, the deity can see, hear, and communicate through the duplicate (either mentally or verbally), and the duplicate can move as quickly as the deity wills it, but never moving more than 120 feet of you. The spell ends when the deity wills it to end, and can not be dispelled by any creature other than another deity."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
 			"name": "Dream Avatar",
 			"source": "ThePrestige",
 			"page": 46,
@@ -522,7 +1000,10 @@
 						"source": "PHB"
 					}
 				]
-			}
+			},
+			"miscTags": [
+				"SMN"
+			]
 		},
 		{
 			"name": "Dream Blast",
@@ -583,6 +1064,59 @@
 			],
 			"miscTags": [
 				"SCL"
+			]
+		},
+		{
+			"name": "Dream Cottage",
+			"source": "ThePrestige",
+			"page": 36,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a roof tile"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 12
+					}
+				}
+			],
+			"entries": [
+				"You pull together shadow substance to construct a living space dwelling of your specifications (such as a house, cabin, hut, or cottage) within a 30-foot cube, complete with furnishings and decorations of your choice. The objects inside behave as they normally would except they will vanish upon taking heavy damage or being moved outside the dwelling; the objects will immediately reappear in their original positions if they vanish. In addition, the objects inside are neither flammable, poisonous, nor edible. If the dwelling itself is damaged, it will repair itself gradually within 1 minute, avoiding any harm to real objects or creatures in the process.",
+				"You can take an action to alter the dwelling’s specifications (including the illusory objects inside), or render the dwelling {@condition invisible} (or visible if already {@condition invisible}). "
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"C"
 			]
 		},
 		{
@@ -693,6 +1227,133 @@
 					}
 				]
 			}
+		},
+		{
+			"name": "Endless Maze",
+			"source": "ThePrestige",
+			"page": 42,
+			"level": 6,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a hanging compass on a chain or string"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You trap one creature you can see within range inside an illusory maze that only the target can see. The target must make an Wisdom saving throw; on a failed save, the target is {@condition stunned} for the duration and can not perceive anything outside of the illusion. At the end of each of its turns, the target can make an Intelligence saving throw; on a successful save, the target is no longer {@condition stunned} and its senses return to normal, ending the spell. If the target takes damage, the target is no longer {@condition stunned} and its senses return to normal, ending the spell.",
+				"If this spell is cast as a ritual, the target needs three consecutive successes on its Intelligence saving throws to end the spell, and the spell’s duration becomes permanent until ended or dispelled. If the target moves more than 10 feet from its original position when the ritual casting began, the ritual casting fails."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"conditionInflict": [
+				"stunned"
+			],
+			"savingThrow": [
+				"intelligence",
+				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Erase Presence",
+			"source": "ThePrestige",
+			"page": 40,
+			"level": 5,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a tiger’s eye worth at least 50 gp"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"A creature that you touch becomes {@condition invisible}, no longer makes sound while moving or taking actions (including footsteps and touching objects), and gains immunity to divination, telepathy, and scrying until the spell ends. Anything that the target is wearing or carrying also becomes {@condition invisible}, no longer makes sound, and gains immunity to divination, telepathy, and scrying (unless equivalent to spells cast with a spell slot higher than the slot spent to cast this spell) until the spell ends. All magical effects applied to the target, including this spell, are immune to detection from divination or scrying. If the target makes an attack or casts a spell, the spell ends."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"conditionInflict": [
+				"invisible"
+			],
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "Evanescent Graffiti",
@@ -818,6 +1479,113 @@
 			},
 			"miscTags": [
 				"OBJ"
+			]
+		},
+		{
+			"name": "False Revival",
+			"source": "ThePrestige",
+			"page": 36,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You touch the corpse (or severed body part) of a dead creature (of Large or smaller size), and produce an illusory duplicate within 10 feet of the corpse that looks exactly as the original creature did before it died (including worn objects and subtle signs of life such as breathing). The duplicate has the movement speeds (including flight) of the original creature and can interact physically with objects, using the Strength and carrying capacity of the original creature. Illusory objects worn by the duplicate vanish if they lose contact with the duplicate.",
+				"The duplicate has an AC of 10 + your Dexterity modifier, and is destroyed on a single hit. It ignores all other damage and effects. If the duplicate moves more than 30 feet away from you, the spell ends and the duplicate vanishes.",
+				"On each of your turns, you can use a bonus action to mentally command the duplicate you made with this spell. The duplicate acts on your initiative, moving where you will it to. The duplicate can only move; if no commands are given, it will stay still unless it is attacked, at which point it will attempt to escape from hostile creatures. The duplicate can not attack but if the original creature was able to speak or make sounds, the duplicate can speak any words or make any sounds that you mentally command it to, sounding exactly like the original creature."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"SMN"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Fantastic Mount",
+			"source": "ThePrestige",
+			"page": 43,
+			"level": 6,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a wing or feather from a beast"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"A Huge quasi-real winged creature appears on the ground in an unoccupied space of your choice within range. The creature’s appearance is as you imagine (such as a dragon, wyvern, griffon, or roc), and it may come with tethers strapped to its back which creature can hold onto. Any of the equipment created by the spell vanishes if moved more than 10 feet away from the mount.",
+				"The mount has a speed of 60 feet, and a fly speed of 120 feet. If used for travel, the mount moves about 14 miles per hour on land (18 with a fast pace), and 28 miles per hour in flight (50 with a fast pace). The mount’s flight is magical in nature, and it can hover in midair.",
+				"The mount can carry up to 3,000 lb. and still fly.",
+				"The mount’s AC equals 10 + your Spellcasting ability modifier, and it is destroyed on a hit. It ignores all other damage and effects.",
+				"The mount can take no actions other than moving; you can take a bonus action to mentally command the mount to move in the direction you choose, to stop, speed up, or slow down. If the mount or those riding on it would be in danger from an obstacle, you can take a reaction to adjust the mount’s course of movement. If you take an action to focus on mentally directing the mount, you do not need to take a reaction or bonus action to direct the mount.",
+				"The spell ends if you take an action to dismiss the mount or if it takes damage"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"SMN",
+				"UBA"
 			]
 		},
 		{
@@ -952,6 +1720,63 @@
 			]
 		},
 		{
+			"name": "Field of Decoys",
+			"source": "ThePrestige",
+			"page": 43,
+			"level": 6,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Eight illusory duplicates of yourself appear, each one in an unoccupied space you can see within range. Until the spell ends, you can take a bonus action on each of your turns to teleport, swapping positions with one of the duplicates, as long as the duplicate is within 30 feet of you. The swapping is performed seamlessly as to produce no signs of teleportation.",
+				"When the spell ends, the duplicates vanish.",
+				"Each duplicate’s AC equals 10 + your Dexterity modifier, and it is destroyed on a hit. The duplicates ignore all other damage and effects. Each duplicate can take no actions other than moving; you can take a bonus action to mentally command some or all of the illusory duplicates move up to your speed.",
+				"NOTE: It is recommended that you and each duplicate be given a different number and that the number be written down secretly, revealing it when it is necessary to prove which duplicate you swapped positions with."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
 			"name": "Fraudulent Resizing",
 			"source": "ThePrestige",
 			"page": 27,
@@ -1003,6 +1828,72 @@
 			},
 			"miscTags": [
 				"OBJ"
+			]
+		},
+		{
+			"name": "Fraudulent Victory",
+			"source": "ThePrestige",
+			"page": 41,
+			"level": 5,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"A mental trap is placed in the mind of one creature you can see within range; the target must make a Wisdom saving throw. On a failed save, the next time the target makes an attack or takes any other action that would harm other creatures, the target instead takes no action on its turn (but still moves normally). An illusion of successfully performing the desired action is created in the target’s mind that appears real to the target, effectively rendering all creatures that would have been affected by the target’s action {@condition invisible} and silent to the target.",
+				"After being affected by the illusion, the target must make a Wisdom saving throw at the end of each turn it takes; on a successful save, the spell ends, and the illusion is broken. If the target somehow detects or is notified about the inconsistency of the reality experienced while affected by this spell, the target can make an immediate Wisdom saving throw to break the illusion (this is not counted towards the target’s saving throw for its turn).",
+				"If the target takes damage or is affected by other magical effects, this spell ends, and the illusion is broken."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -1112,6 +2003,207 @@
 			"miscTags": [
 				"OBJ"
 			]
+		},
+		{
+			"name": "Hide Surroundings",
+			"source": "ThePrestige",
+			"page": 41,
+			"level": 5,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 100
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You render all objects and structures (or parts of them) of your choice within a 30-foot sphere {@condition invisible} until the spell ends. If any of the affected objects are moved or destroyed somehow, they (or their remains) become visible.",
+				"If you cast this spell as a ritual, you can have it maintained without {@status concentration}."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"OBJ"
+			]
+		},
+		{
+			"name": "Illusory Champion",
+			"source": "ThePrestige",
+			"page": 37,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You create a solid illusory construct that follows your mental commands. The construct has the stats of a Knight (Monster Manual - Appendix B) except it is a construct instead of a humanoid, it is immune to the {@condition charmed}, {@condition frightened}, {@condition petrified}, and {@condition stunned} conditions, it is unaligned, it can’t use the Leadership action, and it has no personality, memories, or ability to speak. The construct’s outward appearance is as you imagine it to be, within reason. If the construct’s hit points are reduced to 0 or when the spell ends, the construct vanishes along with all of its illusory equipment.",
+				"On each of your turns, you can use a bonus action to mentally command the construct you made with this spell. The construct acts on your initiative, taking actions and moving where you will it to. A general command such as guarding a creature, object, or location can be given, which the construct will continue following until you give it a different command. If no commands are given, the construct will only defend itself against hostile creatures."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a slot of 6th level or higher, you create one additional construct, and with a slot of 8th level or higher, you create two additional constructs. You can mentally command only a single construct for a specific action, but a general command can be given to all constructs (within 30 feet) simultaneously"
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"SMN",
+				"UBA"
+			]
+		},
+		{
+			"name": "Illusory Gathering",
+			"source": "ThePrestige",
+			"page": 44,
+			"level": 7,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Dozens to hundreds of intangible, moving, illusory creatures of your imagining appear within 1 mile of a location you can see within range, inviting other creatures to move towards the chosen location with sounds or body language. You may designate certain requirements or conditions by which the illusions can choose creatures to invite and lure towards the chosen location.",
+				"If the distance between you and the chosen location exceeds 30 feet, the spell ends."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a slot of 8th level or higher, then you increase the maximum range by 1 mile per level higher than 7th"
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
 		},
 		{
 			"name": "Illusory Intervention",
@@ -1471,6 +2563,249 @@
 			]
 		},
 		{
+			"name": "Mass Image",
+			"source": "ThePrestige",
+			"page": 41,
+			"level": 5,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You create numerous illusory duplicates of yourself that constantly shift around randomly within the bounds of a 30-foot radius circle; the affected area is centered on the location from which you cast this spell. Physical interaction with a duplicate reveals it to be an illusion. If you move from your current location, you can make an Intelligence (Stealth) check to hide within the affected area; you gain a +10 bonus to this check. You can use your action to dismiss the illusory duplicates.",
+				"A creature attempting to make an attack against you while you are within the affected area must make an Intelligence saving throw. On a failed save, the attacker automatically misses. On a successful save, the attacker makes the attack with disadvantage. If the attack hits, you can roll a 6 or higher on a {@dice d20} to have it hit one of your duplicates instead.",
+				"A duplicate’s AC equals 10 + your Dexterity modifier, and it is destroyed on a hit. It ignores all other damage and effects. If 15 or more duplicates are destroyed, the spell ends.",
+				"The duplicates make no sound, so creatures that can not see are unaffected by the spell. Senses other than sight (such as blindsight) or the ability to perceive illusions as false (as with truesight) will also make a creature unaffected by this spell."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"savingThrow": [
+				"intelligence"
+			],
+			"abilityCheck": [
+				"dexterity"
+			],
+			"areaTags": [
+				"R"
+			]
+		},
+		{
+			"name": "Merciful Lie",
+			"source": "ThePrestige",
+			"page": 28,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You take control of a willing or dying creature’s senses, making them experience an environment which makes the target feel comfortable and relaxed. You may also have the target perceive you as another creature of your choice or imagining; you can change form in the illusion as a bonus action. As a bonus action, you can cause yourself to perceive the environment as the target perceives it, as if both of you are in the same illusory location together (another bonus action shifts your senses back to normal). If the distance between you and the target exceeds 30 feet, the spell ends."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"UBA"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Mind Tapestry",
+			"source": "ThePrestige",
+			"page": 45,
+			"level": 8,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Placing your hand on a willing creature’s head, you summon forth a visual display of images crafted from the creature’s thoughts and memories. Until the spell ends, the creature’s thoughts are displayed on a 10 foot by 10 foot screen of mutable light, which produces bright illumination out to 50 feet, and dim illumination for another 50 feet. The screen floats up to 20 feet above the ground and objects will pass harmlessly through it. The screen can be used to communicate a message or story through abstract images or actual visual memories. The affected creature decides which images to show and can end the spell as an action. The images may be accompanied by sound as well; for example, the memory of seeing and hearing a conversation, up to the maximum safe volume for the listeners.",
+				"Alternatively, this spell could be used on an unwilling creature at 30 or less hit points, in which case the target must make a Charisma saving throw. On a failed save, the spell functions as normal except the affected creature has no control over what images can be shown, has no ability to end the spell, and you can forcibly pull images from the target’s memories. In this case, the target can make a Charisma saving throw at the end of every minute to end the spell. "
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"savingThrow": [
+				"charisma"
+			],
+			"miscTags": [
+				"LGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Mirage Strike",
+			"source": "ThePrestige",
+			"page": 29,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"As part of the casting of this spell, you make a melee weapon attack against a target you can see within range. After you make the attack, you teleport up to 10 feet and an intangible illusory duplicate of you appears in the space that you teleported from; to all other creatures, it appears as if you never teleported. The duplicate provokes an opportunity attack from the target. If the target makes the attack, you make a second melee weapon attack against the target with advantage.",
+				"The duplicate vanishes immediately after the opportunity attack or your second attack is made."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			},
+			"spellAttack": [
+				"M"
+			],
+			"miscTags": [
+				"SGT",
+				"OBJ"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
 			"name": "Music Mark",
 			"source": "ThePrestige",
 			"page": 23,
@@ -1578,178 +2913,7 @@
 				"intelligence"
 			],
 			"areaTags": [
-				"S"
-			]
-		},
-		{
-			"name": "Merciful Lie",
-			"source": "ThePrestige",
-			"page": 28,
-			"level": 2,
-			"school": "I",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "touch"
-				}
-			},
-			"components": {
-				"v": true
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "hour",
-						"amount": 1,
-						"upTo": true
-					},
-					"concentration": true
-				}
-			],
-			"entries": [
-				"You take control of a willing or dying creature’s senses, making them experience an environment which makes the target feel comfortable and relaxed. You may also have the target perceive you as another creature of your choice or imagining; you can change form in the illusion as a bonus action. As a bonus action, you can cause yourself to perceive the environment as the target perceives it, as if both of you are in the same illusory location together (another bonus action shifts your senses back to normal). If the distance between you and the target exceeds 30 feet, the spell ends."
-			],
-			"classes": {
-				"fromClassList": [
-					{
-						"name": "Wizard",
-						"source": "PHB"
-					},
-					{
-						"name": "Cleric",
-						"source": "PHB"
-					},
-					{
-						"name": "Bard",
-						"source": "PHB"
-					}
-				]
-			},
-			"miscTags": [
-				"UBA"
-			],
-			"areaTags": [
-				"ST"
-			]
-		},
-		{
-			"name": "Mirage Strike",
-			"source": "ThePrestige",
-			"page": 29,
-			"level": 2,
-			"school": "I",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 5
-				}
-			},
-			"components": {
-				"v": true
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"entries": [
-				"As part of the casting of this spell, you make a melee weapon attack against a target you can see within range. After you make the attack, you teleport up to 10 feet and an intangible illusory duplicate of you appears in the space that you teleported from; to all other creatures, it appears as if you never teleported. The duplicate provokes an opportunity attack from the target. If the target makes the attack, you make a second melee weapon attack against the target with advantage.",
-				"The duplicate vanishes immediately after the opportunity attack or your second attack is made."
-			],
-			"classes": {
-				"fromClassList": [
-					{
-						"name": "Wizard",
-						"source": "PHB"
-					},
-					{
-						"name": "Sorcerer",
-						"source": "PHB"
-					}
-				]
-			},
-			"spellAttack": [
-				"M"
-			],
-			"miscTags": [
-				"SGT",
-				"OBJ"
-			],
-			"areaTags": [
-				"ST"
-			]
-		},
-		{
-			"name": "Mystery Maze",
-			"source": "ThePrestige",
-			"page": 46,
-			"level": 9,
-			"school": "I",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "radius",
-				"distance": {
-					"type": "feet",
-					"amount": 120
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "a black onyx worth at least 100 gp, which the spell consumes",
-					"consume": true,
-					"cost": 10000
-				}
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "minute",
-						"amount": 1,
-						"upTo": true
-					},
-					"concentration": true
-				}
-			],
-			"entries": [
-				"You create an illusory maze of 30 ft. high solid, opaque walls that constantly shifts its turns and paths. The walls are 1 foot thick, have 20 hit points per inch of thickness, and AC 13. The corridors are 5 feet to 10 feet wide. When this spell is cast, you can have all friendly creatures within the affected area separated by walls from nonfriendly creatures within the affected area. Huge or larger creatures are entrapped by walls if they are within the affected area.",
-				"You and friendly creatures can move normally through the affected area. A non-friendly creature must make an Intelligence saving throw when it enters or starts a turn within the affected area. On a successful save, the creature must spend 10 feet of movement for every 5 feet moved through the affected area. On a failed save, the creature must spend 15 feet of movement for every 5 feet moved through the affected area. If a friendly creature (including you) in the affected area moves within sight of a non-friendly creature, a wall will immediately separate them, blocking contact and line of sight.",
-				"When the spell ends, the maze vanishes."
-			],
-			"classes": {
-				"fromClassList": [
-					{
-						"name": "Wizard",
-						"source": "PHB"
-					}
-				]
-			},
-			"savingThrow": [
-				"intelligence"
-			],
-			"areaTags": [
-				"S"
+				"R"
 			]
 		},
 		{
@@ -1808,6 +2972,67 @@
 			],
 			"areaTags": [
 				"ST"
+			]
+		},
+		{
+			"name": "Orbs of Message",
+			"source": "ThePrestige",
+			"page": 44,
+			"level": 7,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "miles",
+					"amount": 1000
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a crystal ball"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"As part of the casting of this spell, you record yourself speaking a message no longer than 1 minute. Glowing orbs are then shot from your location directly towards up to eight creatures of your choice that you are familiar with. If any of the chosen creatures are on another plane (including dead) or beyond the range, the orb that would be sent to them returns to the caster instead and vanishes; the caster knows which orbs could not be sent to their targets. The orbs travel at the speed of light and pass through solid obstacles, except for barriers of magical force (in which case an orb vanishes upon impact and the caster is made aware that the orb was blocked).",
+				"When an orb reaches its intended receiver, it stops hovering in an unoccupied space within 10 feet of the receiver, displays a visual representation of your choice (usually your face or a symbol), and plays your recorded message at the same volume that you spoke it in. The orb vanishes when the message ends."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"MT"
 			]
 		},
 		{
@@ -1876,6 +3101,301 @@
 				"SMN",
 				"UBA",
 				"OBJ"
+			]
+		},
+		{
+			"name": "Painted Scout",
+			"source": "ThePrestige",
+			"page": 30,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "Specially treated ink or paint worth at least 1gp"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You convert a freshly completed drawing/painting of a CR 1 or lower beast into an illusory construct that leaps off the medium (any solid object that can sustain ink/paint on its surface) that it was illustrated upon and obeys your mental commands. You complete the drawing/painting as part of the casting of this spell (you must have an almost completed drawing ready for the casting). Until the spell ends, the drawing/painting becomes a construct with all the stats of the beast except for its creature type (which is now construct), outward appearance (appears as it was drawn) and hit points (1 hit point maximum); it is also immune to the {@condition charmed}, {@condition frightened}, {@condition petrified}, and {@condition stunned} conditions. The spell ends if the construct’s hit points are reduced to 0. When the spell ends, the construct vanishes, leaving behind drops of spilled ink/paint.",
+				"On each of your turns, you can use a bonus action to mentally command the construct you made with this spell. The construct acts on your initiative, moving where you will it to. The construct can only move; if no commands are given, it will stay still unless it is attacked, at which point it will attempt to escape from hostile creatures.",
+				"By taking an action to adjust your senses, you can see and hear what the construct sees and hears, while becoming {@condition blinded} (except for what you perceive through the construct’s vision) until you take a reaction to revert back to your normal senses (or until the spell ends)."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a slot of 2nd level or higher, the maximum CR of the beast you can replicate as a construct is increased by 1 per level of the spell slot spent."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"SCL",
+				"SMN",
+				"UBA",
+				"OBJ"
+			]
+		},
+		{
+			"name": "Penetrating Viewport",
+			"source": "ThePrestige",
+			"page": 30,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You project the illusion of an open door or window on the surface of a wall or obstruction; the illusion is no larger than a 20-foot radius circle, and reveals what is on the other side of the wall or obstruction as if the wall or obstruction was not blocking sight (it however still blocks line of sight for effects). Creatures and objects on the other side of the illusion are {@condition invisible} within the illusion if they are protected somehow from divination such as scrying. If the other side of the wall or obstruction is more than 100 feet away from the surface being used for the illusion, the spell fails."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"OBJ"
+			]
+		},
+		{
+			"name": "Perfect Counterfeit",
+			"source": "ThePrestige",
+			"page": 43,
+			"level": 6,
+			"school": "I",
+			"time": [
+				{
+					"number": 10,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"By pulling together shadow substance, you create an exact duplicate of one object or structure that you touch, which appears in a visible, unoccupied space of your choice within 30 feet of the original, set on the ground. The object or structure can not be heavier than 10,000 lb., must be made entirely of solid materials, and vanishes when the spell ends.",
+				"This spell can be used to duplicate a non-illusory magic item or magical structure, of up to Rare quality. The duplicate functions exactly the same as the copied original, except for any effects applied to the original outside of its designed functions.",
+				"If the object or structure being duplicated possesses an intelligence or soul of some sort, this spell does not duplicate that aspect of the target, or any properties dependent on it."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a 8th level slot or higher, then you can duplicate a Very Rare quality magic item or magical structure."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Persistent Message",
+			"source": "ThePrestige",
+			"page": 30,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "a moonstone worth at least 50gp, which the spell consumes",
+					"consume": true,
+					"cost": 5000
+				}
+			},
+			"duration": [
+				{
+					"type": "permanent"
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You leave behind an illusion of yourself or a willing creature within 5 feet of you when you cast this spell. You can command the illusion to speak a message under conditions of your choice, such as when certain types of creatures approach, or when a nearby creature speaks a password; the illusion speaks with the same voice as the creature it mimics, and uses the same gestures and expressions, but otherwise does not move. The message can be no longer than 1 minute in length, and is recorded as part of the casting. The illusion remains at the location where you cast this spell, and can be resized if desired, up to two size categories larger or smaller. You may choose to have the illusion be {@condition invisible} or suppressed until certain conditions are fulfilled, including the conditions under which its message might be triggered.",
+				"If you cast this spell as a ritual, then you may record up to 10 minutes of speech as part of the casting, and you may command the illusion to answer certain questions with pre-determined answers of your choice."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Phantasmagoria",
+			"source": "ThePrestige",
+			"page": 37,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a prehnite worth at least 10 gp for you and every creature affected by the spell)"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"You and up to eight willing creatures within range enter into a deep slumber, in which you are able to communicate with each other in an enclosed dreamscape, a shared lucid dream that can not be intruded upon. The initial environment that all participants arrive in is whatever you choose to imagine. Every participant can shape the reality of the dreamscape as they imagine, and can share both thoughts and memories in audial and visual form. When the spell ends, all the participants in the dream wake up, refreshed as if having taken a short rest or long rest (depending on how long they were in the dream together).",
+				"You can take an action to end the spell. Creatures affected by this spell can not harm each other in the dream; any attempt to do so will end the spell. "
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"MT"
 			]
 		},
 		{
@@ -2012,195 +3532,7 @@
 			}
 		},
 		{
-			"name": "Painted Scout",
-			"source": "ThePrestige",
-			"page": 30,
-			"level": 2,
-			"school": "I",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "touch"
-				}
-			},
-			"components": {
-				"v": true,
-				"m": "Specially treated ink or paint worth at least 1gp"
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "hour",
-						"amount": 8,
-						"upTo": true
-					},
-					"concentration": true
-				}
-			],
-			"entries": [
-				"You convert a freshly completed drawing/painting of a CR 1 or lower beast into an illusory construct that leaps off the medium (any solid object that can sustain ink/paint on its surface) that it was illustrated upon and obeys your mental commands. You complete the drawing/painting as part of the casting of this spell (you must have an almost completed drawing ready for the casting). Until the spell ends, the drawing/painting becomes a construct with all the stats of the beast except for its creature type (which is now construct), outward appearance (appears as it was drawn) and hit points (1 hit point maximum); it is also immune to the {@condition charmed}, {@condition frightened}, {@condition petrified}, and {@condition stunned} conditions. The spell ends if the construct’s hit points are reduced to 0. When the spell ends, the construct vanishes, leaving behind drops of spilled ink/paint.",
-				"On each of your turns, you can use a bonus action to mentally command the construct you made with this spell. The construct acts on your initiative, moving where you will it to. The construct can only move; if no commands are given, it will stay still unless it is attacked, at which point it will attempt to escape from hostile creatures.",
-				"By taking an action to adjust your senses, you can see and hear what the construct sees and hears, while becoming {@condition blinded} (except for what you perceive through the construct’s vision) until you take a reaction to revert back to your normal senses (or until the spell ends)."
-			],
-			"entriesHigherLevel": [
-				{
-					"type": "entries",
-					"name": "At Higher Levels",
-					"entries": [
-						"When you cast this spell with a slot of 2nd level or higher, the maximum CR of the beast you can replicate as a construct is increased by 1 per level of the spell slot spent."
-					]
-				}
-			],
-			"classes": {
-				"fromClassList": [
-					{
-						"name": "Wizard",
-						"source": "PHB"
-					},
-					{
-						"name": "Bard",
-						"source": "PHB"
-					}
-				]
-			},
-			"miscTags": [
-				"SCL",
-				"SMN",
-				"UBA",
-				"OBJ"
-			]
-		},
-		{
-			"name": "Penetrating Viewport",
-			"source": "ThePrestige",
-			"page": 30,
-			"level": 2,
-			"school": "I",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 10
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "hour",
-						"amount": 1,
-						"upTo": true
-					},
-					"concentration": true
-				}
-			],
-			"entries": [
-				"You project the illusion of an open door or window on the surface of a wall or obstruction; the illusion is no larger than a 20-foot radius circle, and reveals what is on the other side of the wall or obstruction as if the wall or obstruction was not blocking sight (it however still blocks line of sight for effects). Creatures and objects on the other side of the illusion are {@condition invisible} within the illusion if they are protected somehow from divination such as scrying. If the other side of the wall or obstruction is more than 100 feet away from the surface being used for the illusion, the spell fails."
-			],
-			"classes": {
-				"fromClassList": [
-					{
-						"name": "Wizard",
-						"source": "PHB"
-					},
-					{
-						"name": "Ranger",
-						"source": "PHB"
-					},
-					{
-						"name": "Druid",
-						"source": "PHB"
-					},
-					{
-						"name": "Cleric",
-						"source": "PHB"
-					},
-					{
-						"name": "Bard",
-						"source": "PHB"
-					}
-				]
-			},
-			"miscTags": [
-				"OBJ"
-			]
-		},
-		{
-			"name": "Persistent Message",
-			"source": "ThePrestige",
-			"page": 30,
-			"level": 2,
-			"school": "I",
-			"time": [
-				{
-					"number": 1,
-					"unit": "minute"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 5
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "a moonstone worth at least 50gp, which the spell consumes",
-					"consume": true,
-					"cost": 5000
-				}
-			},
-			"duration": [
-				{
-					"type": "permanent"
-				}
-			],
-			"meta": {
-				"ritual": true
-			},
-			"entries": [
-				"You leave behind an illusion of yourself or a willing creature within 5 feet of you when you cast this spell. You can command the illusion to speak a message under conditions of your choice, such as when certain types of creatures approach, or when a nearby creature speaks a password; the illusion speaks with the same voice as the creature it mimics, and uses the same gestures and expressions, but otherwise does not move. The message can be no longer than 1 minute in length, and is recorded as part of the casting. The illusion remains at the location where you cast this spell, and can be resized if desired, up to two size categories larger or smaller. You may choose to have the illusion be {@condition invisible} or suppressed until certain conditions are fulfilled, including the conditions under which its message might be triggered.",
-				"If you cast this spell as a ritual, then you may record up to 10 minutes of speech as part of the casting, and you may command the illusion to answer certain questions with pre-determined answers of your choice."
-			],
-			"classes": {
-				"fromClassList": [
-					{
-						"name": "Wizard",
-						"source": "PHB"
-					},
-					{
-						"name": "Cleric",
-						"source": "PHB"
-					},
-					{
-						"name": "Bard",
-						"source": "PHB"
-					}
-				]
-			}
-		},
-		{
-			"name": "Phantom Assault",
+			"name": "Phantom Smite",
 			"source": "ThePrestige",
 			"page": 24,
 			"level": 1,
@@ -2251,19 +3583,19 @@
 			]
 		},
 		{
-			"name": "Phantom Battlefield",
+			"name": "Phantom Stage",
 			"source": "ThePrestige",
-			"page": 47,
-			"level": 9,
+			"page": 41,
+			"level": 5,
 			"school": "I",
 			"time": [
 				{
-					"number": 1,
-					"unit": "action"
+					"number": 10,
+					"unit": "minute"
 				}
 			],
 			"range": {
-				"type": "radius",
+				"type": "point",
 				"distance": {
 					"type": "feet",
 					"amount": 120
@@ -2271,22 +3603,22 @@
 			},
 			"components": {
 				"v": true,
-				"s": true
+				"s": true,
+				"m": "a wrench, hammer, or screwdriver"
 			},
 			"duration": [
 				{
 					"type": "timed",
 					"duration": {
-						"type": "minute",
-						"amount": 10,
-						"upTo": true
-					},
-					"concentration": true
+						"type": "hour",
+						"amount": 12
+					}
 				}
 			],
 			"entries": [
-				"Reality warps around you as unattended objects, structures, and the environment within 120 feet vanish, transforming into an environment of your imagining, including hazards such as magma flows, quicksand pits, or deep crevices; unusual terrain such as floating platforms or variable gravity floors can also be included in the imagined environment. Atmospheric conditions within the imagined environment however remain the same as they were before the spell was cast.",
-				"Creatures that would be in hazardous terrain are immediately teleported to the nearest unoccupied safe location. The imagined environment must have enough locations of non-hazardous terrain for every creature in the affected area to be in. When the spell ends, the environment reverts back to how it was before the spell was cast, and any damage to the imagined environment has no effect on the reverted objects, structures, and environment."
+				"You pull together shadow substance to construct a raised platform structure of your specifications, complete with furnishings and decorations of your choice. The structure can be shaped as you imagine, so long as it fits within a 100-ft. length cube, and can have a complex architecture, including mechanisms such as curtain systems, trap doors, or sliding scenery walls. If the structure itself is damaged, it will repair itself gradually within 1 minute, avoiding any harm to real objects or creatures in the process. In addition, the materials used for the structure are neither flammable, poisonous, nor edible.",
+				"The objects produced for the structure behave as they normally would except they will vanish upon taking heavy damage or being moved more than 30 feet away from the structure; the objects will immediately reappear in their original positions if they vanish. In addition, the objects produced are neither flammable, poisonous, nor edible.",
+				"You can take an action to alter the structure’s specifications (including the illusory objects inside or upon it), or render the structure {@condition invisible} (or visible if already {@condition invisible}). "
 			],
 			"classes": {
 				"fromClassList": [
@@ -2294,6 +3626,48 @@
 						"name": "Bard",
 						"source": "PHB"
 					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Phantom Stasis",
+			"source": "ThePrestige",
+			"page": 45,
+			"level": 7,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "special"
+				}
+			],
+			"entries": [
+				"You create an intangible illusory duplicate of yourself, which appears within an unoccupied space within 5 feet of your body. The duplicate can move or fly at a speed of 60 feet, can pass through solid obstacles, and you can see and hear through the duplicate as if it were your actual body. Your consciousness is connected to the duplicate, allowing you to move it at will; your actual body enters a state of deep, mystical meditation in which it does not age and does not need to eat, breathe, or sleep. You can take an action to end the spell. The duplicate vanishes when the spell ends. ",
+				"If your actual body takes damage or is shaken out of meditation, the spell ends and you awake within your actual body. Attempting to pass through a dead magic zone, antimagic field, or a barrier of magical force destroys the duplicate, ending the spell and waking you up. If you wake up because your duplicate is destroyed or dispelled, you take {@dice 8d6} points of psychic damage."
+			],
+			"classes": {
+				"fromClassList": [
 					{
 						"name": "Sorcerer",
 						"source": "PHB"
@@ -2308,65 +3682,6 @@
 					}
 				]
 			}
-		},
-		{
-			"name": "Phantom Smite",
-			"source": "ThePrestige",
-			"page": 46,
-			"level": 8,
-			"school": "I",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 60
-				}
-			},
-			"components": {
-				"v": true
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"entries": [
-				"You speak a word of power that causes one creature you can see within range to have its senses assaulted by an illusionary environment that only it can see and hear. If the creature has 150 or fewer hit points, it is {@condition blinded} and {@condition deafened}. Otherwise, the spell has no effect.",
-				"The target can make a Wisdom saving throw at the end of its every turn. On a successful save, the target is no longer {@condition blinded} and {@condition deafened}."
-			],
-			"classes": {
-				"fromClassList": [
-					{
-						"name": "Bard",
-						"source": "PHB"
-					},
-					{
-						"name": "Sorcerer",
-						"source": "PHB"
-					},
-					{
-						"name": "Warlock",
-						"source": "PHB"
-					},
-					{
-						"name": "Wizard",
-						"source": "PHB"
-					}
-				]
-			},
-			"conditionInflict": [
-				"blinded",
-				"deafened"
-			],
-			"savingThrow": [
-				"wisdom"
-			]
 		},
 		{
 			"name": "Power Word Hallucinate",
@@ -2425,7 +3740,476 @@
 			],
 			"savingThrow": [
 				"wisdom"
+			],
+			"areaTags": [
+				"ST"
 			]
+		},
+		{
+			"name": "Project Message",
+			"source": "ThePrestige",
+			"page": 37,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "miles",
+					"amount": 500
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You create an intangible, illusory duplicate of yourself that appears within an unoccupied space within sight and hearing of a creature that you are familiar with. The duplicate can make gestures freely, but can not move more than 5 feet from its original position. The duplicate is able to speak aloud one message of your choice, for up to 1 minute (the message is recorded as part of the casting). When the spell ends, the duplicate vanishes."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a slot of 5th level or higher, then you can double the range per level higher than 4th (ex. 2,000 miles at 6th level)."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Selective Invisibility",
+			"source": "ThePrestige",
+			"page": 37,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a colored glass lens"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"A creature you touch becomes {@condition invisible} to all creatures except creatures that fulfill a condition of your choice, chosen during the casting of this spell. You may take an action to make the target visible to creatures of your choice even if they do not fulfill the conditions specified during the spell’s casting. Anything that the target is wearing or carrying is {@condition invisible} as long as it is on the target’s person. The spell ends if the target attacks or casts a spell."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a slot of 5th level or higher, then you can add an additional target per level higher than 4th."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"conditionInflict": [
+				"invisible"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Selective Obstruction",
+			"source": "ThePrestige",
+			"page": 42,
+			"level": 5,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a piece of wire mesh"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You create an opaque, illusory wall in unoccupied space within range, made of solidified shadow substance (the cosmetic appearance of the wall may be to your imagining). The wall appears in any orientation you choose: horizontally, vertically, or diagonally. It can be free floating, or rest on a solid surface. The wall disappears when the spell ends.",
+				"The wall can be up to 40 feet long, 20 feet high, and 1 foot thick. It blocks line of sight, has an AC of 15, 20 hit points per inch of thickness, and has resistance to nonmagical bludgeoning, piercing, and slashing damage.",
+				"You may choose to curve the wall or even shape it into a dome or cylinder. More complex shapes may be possible, at the DM’s discretion.",
+				"You can choose to make the wall passable (moving directly through it or opening a hole or door for entry) only to certain creatures under a single specific condition chosen when you cast the spell.",
+				"If you cast this spell as a ritual, the spell’s duration increases to 10 hours, does not require {@status concentration} to maintain, and you can specify any number of conditions (within reason) for allowing creatures passage through the wall. The material component for casting this spell as a ritual is changed to a piece of mithral wire mesh worth at least 100 gp, which is consumed by the spell."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"Y",
+				"H",
+				"W"
+			]
+		},
+		{
+			"name": "Shadow Appendage",
+			"source": "ThePrestige",
+			"page": 35,
+			"level": 3,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "a tourmaline worth at least 50 gp, which the spell consumes",
+					"consume": true,
+					"cost": 5000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 12
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You cause a solid illusory finger, toe, hand, foot, arm or leg to appear at the stump of a creature whose corresponding body part was lost. The illusory part looks exactly like the part that it is replacing and functions as if it were the original, including dextrous manipulation and sensation. If the illusory part is heavily damaged or is somehow separated from the body, the spell ends. when the spell ends, the illusory part vanishes. Minor injuries to the part appear to heal within seconds, and it neither bleeds nor is actually connected to the rest of the creature’s body (it simply functions as if it were).",
+				"If this spell is cast as a ritual, tourmalines worth a total of at least 500 gp can be used as the material component to make the illusion permanent until dispelled."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Shadow Bridge",
+			"source": "ThePrestige",
+			"page": 42,
+			"level": 5,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You produce a flat plane bridge made of quasi-real material leading across a direction of your choice, and starting from a space within 10 feet. The bridge is up to 20 feet wide, 200 feet long, and 1 foot thick. It has an AC of 13 and 10 hit points per inch. You can create it at an incline and choose to make any or all of its surface area into difficult terrain.",
+				"The bridge is fixed in space and does not need to connect with another structure to maintain its integrity. It can support any amount of weight while it exists.",
+				"When the spell ends or is dismissed, the bridge disappears and anything on it falls."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a slot of 6th level or higher, then you increase the maximum length by 50 feet per level higher than 5th."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Shadow Clone",
+			"source": "ThePrestige",
+			"page": 38,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You produce a solid, illusory duplicate of yourself, which appears in an unoccupied space within range. The duplicate has all of your stats (including memories and personality) except for the following:",
+				{
+					"type": "list",
+					"items": [
+						"The duplicate is destroyed on a single hit from an attack or if it has an ongoing damaging effect applied to it. You gain whatever memories were experienced by the duplicate before it was destroyed. The duplicate ignores any other damage unless an effect would deal a single instance of damage equal to 1/4 or more of your maximum hit point value, in which case the duplicate is destroyed. The spell ends when the duplicate is destroyed, and the duplicate’s body vanishes",
+						"The duplicate’s equipment is composed of nonmagical duplicates of the equipment you were wearing or wielding when you cast this spell (make adjustments to the stats as needed). The equipment vanishes if separated from the duplicate for more than 1 minute or if heavily damaged.",
+						"If the duplicate spends any ki points, spell slots, or uses of any feature that has a limited number of uses, they count towards what you’ve spent.",
+						"The duplicate can not attack more than once on its turn, concentrate on a spell, or attune to a magic item."
+					]
+				},
+				"On each of your turns, you can use a bonus action to mentally command the duplicate you made with this spell. The duplicate acts on your initiative, taking actions and moving where you will it to. A general command such as guarding a creature, object, or location can be given, which the duplicate will continue following until you give it a different command. If no commands are given, the duplicate will act on its own as necessary, following your will as if it were you (controlled by the DM). If the duplicate is more than 30 feet away from you, you can’t give it mental commands."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"SMN",
+				"UBA"
+			]
+		},
+		{
+			"name": "Shadow Stairs",
+			"source": "ThePrestige",
+			"page": 38,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You create a set of connected stairs made of quasi-real material leading up a direction of your choice, and starting from a space within 10 feet. The stairs may be diagonal or spiral upwards. The maximum height that you can place the top of the stairs is 60 feet. The stairs can be made wide enough to accommodate Large or smaller creatures.",
+				"The individual boards that make up the stairs are each up to 15 feet long, 1 foot wide, and 1 inch thick. They each have an AC of 13 and 10 hit points.",
+				"The stairs are fixed in space and do not need to connect with another structure to maintain their integrity. They can support any amount of weight while they exist.",
+				"When the spell ends or is dismissed, the stairs disappear and anything on them falls."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						" When you cast this spell with a slot of 5th level or higher, then you increase the maximum height by 10 feet per level higher than 4th"
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
 		},
 		{
 			"name": "Shadow Tool",
@@ -2554,6 +4338,158 @@
 			"areaTags": [
 				"ST"
 			]
+		},
+		{
+			"name": "Sky Paint",
+			"source": "ThePrestige",
+			"page": 35,
+			"level": 3,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "sight"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You create a still, intangible 2-dimensional image that appears in a part of the sky you can see. The image can be anything you can imagine, and can be as wide as 100 feet. Creatures that closely approach the image can easily recognize it as an illusion. You can take an action to change the image to any other image you can imagine."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Storm of Clones",
+			"source": "ThePrestige",
+			"page": 45,
+			"level": 7,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Eight illusory duplicates of yourself appear, each one in an unoccupied space you can see within range. On each of your turns, you can use a bonus action to mentally command the duplicates you made with this spell. You can mentally command only a single duplicate for a specific action, but a general command can be given to all duplicates (within 30 feet) simultaneously.",
+				"Each duplicate acts on your initiative, taking actions and moving where you will it to. A general command such as guarding a creature, object, or location can be given, which the duplicate will continue following until you give it a different command. If no commands are given, the duplicate will only defend itself against hostile creatures. When commanded, each duplicate can make a melee weapon attack or ranged weapon attack against a creature (if the target is within range), using a nonmagical duplicate of a weapon (and ammunition) that you are currently wielding; the attack roll uses your spell attack modifier.",
+				"Each duplicate’s AC equals 10 + your Dexterity modifier, and it is destroyed on a hit. The duplicates ignore all other damage and effects. All equipment duplicated by this spell is nonmagical and vanishes if the distance between it and the duplicate from which it originated exceeds 30 feet.",
+				"When the spell ends, the duplicates vanish, as well as any equipment that was duplicated with them"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"SMN"
+			]
+		},
+		{
+			"name": "Storyteller’s Emergence",
+			"source": "ThePrestige",
+			"page": 35,
+			"level": 3,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You point your finger at written text in a single book, scroll, or on a patch of surface no larger than 100 feet in any direction is made to appear as if written in a language known by the reader (other types of writing medium may be targeted, at the DM’s discretion). An intangible illusory duplicate(s) of the target text’s author(s) appears within an unoccupied space of your choice within 30 feet of the text and begins to speak the written text aloud from beginning to end (up to the maximum safe volume for listeners). The duplicate’s appearance is randomly chosen from however the author appeared while writing or dictating the text.",
+				"The duplicate speaks the written text in completion even if parts of it are damaged or missing. You can take an action to stop the spoken text, move it back to an earlier part, or move it forward as much as you desire. When the spell ends, the duplicate vanishes. "
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
 		},
 		{
 			"name": "Sudden Displacement",
@@ -2800,6 +4736,64 @@
 			]
 		},
 		{
+			"name": "Topsy Turvy",
+			"source": "ThePrestige",
+			"page": 35,
+			"level": 3,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You create a brief sensory distortion within a 15-foot radius sphere, making creatures within it see the world twist around them and experience unsettling sensations that disrupt their balance. Every creature within the affected area must also make a Wisdom saving throw. On a failed save, a creature falls {@condition prone} and has disadvantage on attack rolls, Dexterity ability checks and Dexterity saving throws until the start of its next turn."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
 			"name": "Transient Shackles",
 			"source": "ThePrestige",
 			"page": 25,
@@ -2929,6 +4923,67 @@
 			]
 		},
 		{
+			"name": "Vengeful Accusers",
+			"source": "ThePrestige",
+			"page": 38,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a set of scales"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You point your finger to accuse a creature you can see within range of a crime that you name, causing the target to remember its past commitments of the named crime, even if its memories are currently suppressed somehow. The target must make a Wisdom saving throw. On a failed save, all of the victims directly resulting from the named crime appear within 30 feet of the target as ghostly apparitions (if there is no direct victims, then duplicates of the target appear instead). These are not the actual victims, but illusory constructs with the ability to speak any language that you speak.",
+				"Each of the constructs can be individually asked to give testimony, at which point the target can make a Charisma saving throw. On a successful save, the construct is destroyed. On a failed save, the construct audibly describes the details of an instance of the named crime that was committed by the target, including the time and date of the crime. If the target makes its third consecutive successful Charisma save, or there are no more constructs left, the spell ends.",
+				"If this spell is cast as a ritual, there is no initial saving throw"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					}
+				]
+			},
+			"savingThrow": [
+				"wisdom",
+				"charisma"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
 			"name": "Vertigo Storm",
 			"source": "ThePrestige",
 			"page": 46,
@@ -3000,6 +5055,184 @@
 			]
 		},
 		{
+			"name": "Wall of Invisibility",
+			"source": "ThePrestige",
+			"page": 39,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You create an {@condition invisible}, intangible, illusory wall in unoccupied space within range. The wall appears in any orientation you choose: horizontally, vertically, or diagonally. It can be free floating, or it can rest on a solid surface. The wall can be up to 60 feet long, 30 feet high, and 1 inch thick. When the spell ends, the wall vanishes.",
+				"You can choose one of the following effects when you cast this spell.",
+				{
+					"type": "list",
+					"items": [
+						"Creatures on one side of the wall (of your choice) can not see creatures on the other side of the wall, as if the creatures on the other side are {@condition invisible}.",
+						"Creatures on both sides of the wall can not see creatures on the other side of the wall, as if the creatures on the other side are {@condition invisible}."
+					]
+				},
+				"You may choose to let creatures of your choice on either side of the wall to be visible to creatures on the other side. "
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"W"
+			]
+		},
+		{
+			"name": "Wall of Misdirection",
+			"source": "ThePrestige",
+			"page": 43,
+			"level": 6,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a soot-covered poisonous mushroom"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"A wall of swirling multi-colored mist, flashing lights, and strange images from your imagination appears in unoccupied space within range. Creatures within the wall are inundated with false sensations and a warping of their sense of direction. The wall appears in any orientation you choose: horizontally, vertically, or diagonally. It can be free floating, or it can rest on a solid surface. The wall can be up to 40 feet long, 20 feet high, and 10 feet thick. The wall blocks line of sight, but creatures and objects can pass through it.",
+				"Whenever a creature enters or moves 5 feet through the wall’s affected area, it must make a Wisdom saving throw. On a failed save, the creature can only move in the opposite direction for their next 5 feet of movement."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"FMV",
+				"OBS"
+			],
+			"areaTags": [
+				"W"
+			]
+		},
+		{
+			"name": "Wall of Reflection",
+			"source": "ThePrestige",
+			"page": 35,
+			"level": 3,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "turn",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You create a mirror-like illusory wall in unoccupied space within range. The wall appears in any orientation you choose: horizontally, vertically, or diagonally. It can be free floating, or it can rest on a solid surface. The wall can be up to 60 feet long, 30 feet high, and 1 inch thick. You can choose to have the wall be reflective on one side or both sides; if the wall is only reflective on one side then it is transparent to the other side. Creatures and objects can pass through the wall.",
+				"The reflective nature of the wall may repel certain types of effects related to light (at the DM’s discretion), such as blinding light or beams of light. To a viewer on the transparent side of a one-sided wall, blinding light will appear as if filling the other side of the wall with the hue of the light, extending beyond the wall on the transparent side as bright light."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"W"
+			]
+		},
+		{
 			"name": "Winged Messenger",
 			"source": "ThePrestige",
 			"page": 25,
@@ -3063,6 +5296,83 @@
 					}
 				]
 			}
+		},
+		{
+			"name": "Zone of Invisibility",
+			"source": "ThePrestige",
+			"page": 39,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "powdered silver worth at least 1 gp, which the spell consumes",
+					"consume": true,
+					"cost": 100
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You create a fixed area in which creatures are rendered {@condition invisible}, fitting within a 20-foot cube. Any creature that is within the affected area when you cast this spell is rendered {@condition invisible} until it leaves the area. Any creature that enters the affected area is rendered {@condition invisible} until it leaves the area. Equipment and objects that are worn or carried by affected creatures are also rendered {@condition invisible}. If a creature within the affected area attacks or casts a spell, it becomes unaffected by the spell until the end of its next turn.",
+				"If you cast this spell as a ritual, you can add one or more of the following effects.",
+				{
+					"type": "list",
+					"items": [
+						"Only creatures that fulfill certain conditions are affected by the spell, or unaffected.",
+						"Creatures affected by the spell can be seen by creatures that fulfill certain conditions.",
+						"Creatures within the affected area can see themselves and other creatures within the affected area."
+					]
+				},
+				"If you cast this spell as a ritual, you can make the spell’s duration permanent by instead using silver powder worth at least 100 gp for the material component."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"C"
+			]
 		}
 	]
 }
