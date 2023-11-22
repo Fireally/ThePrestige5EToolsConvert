@@ -17,8 +17,8 @@
 				"color": "#4169e1"
 			}
 		],
-		"dateAdded": 1700622200,
-		"dateLastModified": 1700622200
+		"dateAdded": 1700623348,
+		"dateLastModified": 1700623348
 	},
 	"spell": [
 		{
@@ -3518,6 +3518,140 @@
 			}
 		},
 		{
+			"name": "Shadow Clone",
+			"source": "ThePrestige",
+			"page": 38,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You produce a solid, illusory duplicate of yourself, which appears in an unoccupied space within range. The duplicate has all of your stats (including memories and personality) except for the following:",
+				{
+					"type": "list",
+					"items": [
+						"The duplicate is destroyed on a single hit from an attack or if it has an ongoing damaging effect applied to it. You gain whatever memories were experienced by the duplicate before it was destroyed. The duplicate ignores any other damage unless an effect would deal a single instance of damage equal to 1/4 or more of your maximum hit point value, in which case the duplicate is destroyed. The spell ends when the duplicate is destroyed, and the duplicate’s body vanishes",
+						"The duplicate’s equipment is composed of nonmagical duplicates of the equipment you were wearing or wielding when you cast this spell (make adjustments to the stats as needed). The equipment vanishes if separated from the duplicate for more than 1 minute or if heavily damaged.",
+						"If the duplicate spends any ki points, spell slots, or uses of any feature that has a limited number of uses, they count towards what you’ve spent.",
+						"The duplicate can not attack more than once on its turn, concentrate on a spell, or attune to a magic item."
+					]
+				},
+				"On each of your turns, you can use a bonus action to mentally command the duplicate you made with this spell. The duplicate acts on your initiative, taking actions and moving where you will it to. A general command such as guarding a creature, object, or location can be given, which the duplicate will continue following until you give it a different command. If no commands are given, the duplicate will act on its own as necessary, following your will as if it were you (controlled by the DM). If the duplicate is more than 30 feet away from you, you can’t give it mental commands."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"SMN",
+				"UBA"
+			]
+		},
+		{
+			"name": "Shadow Stairs",
+			"source": "ThePrestige",
+			"page": 38,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You create a set of connected stairs made of quasi-real material leading up a direction of your choice, and starting from a space within 10 feet. The stairs may be diagonal or spiral upwards. The maximum height that you can place the top of the stairs is 60 feet. The stairs can be made wide enough to accommodate Large or smaller creatures.",
+				"The individual boards that make up the stairs are each up to 15 feet long, 1 foot wide, and 1 inch thick. They each have an AC of 13 and 10 hit points.",
+				"The stairs are fixed in space and do not need to connect with another structure to maintain their integrity. They can support any amount of weight while they exist.",
+				"When the spell ends or is dismissed, the stairs disappear and anything on them falls."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						" When you cast this spell with a slot of 5th level or higher, then you increase the maximum height by 10 feet per level higher than 4th"
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
 			"name": "Shadow Tool",
 			"source": "ThePrestige",
 			"page": 20,
@@ -4068,6 +4202,67 @@
 			},
 			"miscTags": [
 				"OBJ"
+			]
+		},
+		{
+			"name": "Vengeful Accusers",
+			"source": "ThePrestige",
+			"page": 38,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a set of scales"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You point your finger to accuse a creature you can see within range of a crime that you name, causing the target to remember its past commitments of the named crime, even if its memories are currently suppressed somehow. The target must make a Wisdom saving throw. On a failed save, all of the victims directly resulting from the named crime appear within 30 feet of the target as ghostly apparitions (if there is no direct victims, then duplicates of the target appear instead). These are not the actual victims, but illusory constructs with the ability to speak any language that you speak.",
+				"Each of the constructs can be individually asked to give testimony, at which point the target can make a Charisma saving throw. On a successful save, the construct is destroyed. On a failed save, the construct audibly describes the details of an instance of the named crime that was committed by the target, including the time and date of the crime. If the target makes its third consecutive successful Charisma save, or there are no more constructs left, the spell ends.",
+				"If this spell is cast as a ritual, there is no initial saving throw"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					}
+				]
+			},
+			"savingThrow": [
+				"wisdom",
+				"charisma"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
