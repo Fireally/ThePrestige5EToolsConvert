@@ -17,8 +17,8 @@
 				"color": "#4169e1"
 			}
 		],
-		"dateAdded": 1700614250,
-		"dateLastModified": 1700614250
+		"dateAdded": 1700616126,
+		"dateLastModified": 1700616126
 	},
 	"spell": [
 		{
@@ -78,6 +78,66 @@
 				"SCL",
 				"SMN",
 				"ADV"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Cage of Unreality",
+			"source": "ThePrestige",
+			"page": 44,
+			"level": 7,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "100 pieces of agate worth at least 1 gp each, which are arranged in a circle around the target and consumed by the spell",
+					"consume": true,
+					"cost": 10000
+				}
+			},
+			"duration": [
+				{
+					"type": "permanent"
+				}
+			],
+			"entries": [
+				"You force a creature (at 30 hit points or lower) you can see within range into a deep slumber in which the target dreams itself living in an alternate reality of your imagining, which may be partially built using the target’s own memories. The alternate reality can be as pleasant or unpleasant to the target as you choose, and can be designed to fool the target into believing that the alternate reality is the true reality; in this case the target must make an Insight (Wisdom) check opposed by your Deception (Charisma or Intelligence) check to realize that the alternate reality is not real.",
+				"While the target is asleep, it can not be woken by non-magical means, and successful attempts to forcefully wake up the target will force it to make a Wisdom saving throw. On a failed save, the target will take {@dice 12d8} points of psychic damage and its memories will be damaged in some way (at the DM’s discretion). On a successful save, the target takes half damage.",
+				"The target does not need to eat or drink while affected by this spell, and does not age. If the target rejects the reality that it has been trapped in, then the target can make a Charisma saving throw once per hour. When the target has succeeded on three consecutive Charisma saving throws against this spell, the spell ends and the target wakes up. "
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"wisdom",
+				"charisma"
+			],
+			"abilityCheck": [
+				"wisdom"
 			],
 			"areaTags": [
 				"ST"
@@ -566,7 +626,10 @@
 						"source": "PHB"
 					}
 				]
-			}
+			},
+			"miscTags": [
+				"SMN"
+			]
 		},
 		{
 			"name": "Dream Blast",
@@ -1156,6 +1219,74 @@
 			"miscTags": [
 				"OBJ"
 			]
+		},
+		{
+			"name": "Illusory Gathering",
+			"source": "ThePrestige",
+			"page": 44,
+			"level": 7,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Dozens to hundreds of intangible, moving, illusory creatures of your imagining appear within 1 mile of a location you can see within range, inviting other creatures to move towards the chosen location with sounds or body language. You may designate certain requirements or conditions by which the illusions can choose creatures to invite and lure towards the chosen location.",
+				"If the distance between you and the chosen location exceeds 30 feet, the spell ends."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a slot of 8th level or higher, then you increase the maximum range by 1 mile per level higher than 7th"
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
 		},
 		{
 			"name": "Illusory Intervention",
@@ -1860,6 +1991,67 @@
 			],
 			"areaTags": [
 				"ST"
+			]
+		},
+		{
+			"name": "Orbs of Message",
+			"source": "ThePrestige",
+			"page": 44,
+			"level": 7,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "miles",
+					"amount": 1000
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a crystal ball"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"As part of the casting of this spell, you record yourself speaking a message no longer than 1 minute. Glowing orbs are then shot from your location directly towards up to eight creatures of your choice that you are familiar with. If any of the chosen creatures are on another plane (including dead) or beyond the range, the orb that would be sent to them returns to the caster instead and vanishes; the caster knows which orbs could not be sent to their targets. The orbs travel at the speed of light and pass through solid obstacles, except for barriers of magical force (in which case an orb vanishes upon impact and the caster is made aware that the orb was blocked).",
+				"When an orb reaches its intended receiver, it stops hovering in an unoccupied space within 10 feet of the receiver, displays a visual representation of your choice (usually your face or a symbol), and plays your recorded message at the same volume that you spoke it in. The orb vanishes when the message ends."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"MT"
 			]
 		},
 		{
@@ -2586,7 +2778,10 @@
 						"source": "PHB"
 					}
 				]
-			}
+			},
+			"miscTags": [
+				"SMN"
+			]
 		},
 		{
 			"name": "Sudden Displacement",
