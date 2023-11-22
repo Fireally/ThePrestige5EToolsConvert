@@ -17,10 +17,65 @@
 				"color": "#4169e1"
 			}
 		],
-		"dateAdded": 1700625306,
-		"dateLastModified": 1700625306
+		"dateAdded": 1700626312,
+		"dateLastModified": 1700626312
 	},
 	"spell": [
+		{
+			"name": "Afterimage Displacement",
+			"source": "ThePrestige",
+			"page": 36,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"As part of the casting of this spell you move up to your speed (minimum 5 feet + 5 feet per size category beyond Medium). An illusory duplicate of you is created in each 5-foot (+5 feet per size category beyond Medium) space that you exit during this movement. If this movement would provoke an opportunity attack, the opportunity attack targets the duplicate that was left in the space from which you provoked the opportunity attack. When you complete the movement, you can teleport to one space of your choice within the path you just traveled, leaving behind a duplicate and replacing the duplicate occupying the space that you teleport to. The replacement is performed seamlessly as to produce no signs of teleportation.",
+				"Each duplicate’s AC equals 10 + your Dexterity modifier, and it is destroyed on a hit. The duplicates ignore all other damage and effects. Each duplicate can take no actions other than moving; you can take a bonus action to mentally command some or all of the illusory duplicates move up to your speed.",
+				"NOTE: It is recommended that each duplicate be given a different number and that the number be written down secretly, revealing it when it is necessary to prove which duplicate you replaced."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
 		{
 			"name": "Ancient Image",
 			"source": "ThePrestige",
@@ -625,6 +680,76 @@
 			]
 		},
 		{
+			"name": "Death’s Tale",
+			"source": "ThePrestige",
+			"page": 36,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "a lapis lazuli, worth at least 10 gp, which the spell consumes",
+					"consume": true,
+					"cost": 1000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You touch a corpse, and an intangible illusion is projected within 30 feet of the corpse. The illusion reveals the events of the final minute leading to the death of the creature, played out in motion as if seeing the memories of a witness that was present at the scene of death. You can play the death scene at any moment within the minute of the scene, rewinding, pausing, or moving the imagery forward in time as an action. "
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
 			"name": "Deceptive Heist",
 			"source": "ThePrestige",
 			"page": 26,
@@ -939,6 +1064,59 @@
 			],
 			"miscTags": [
 				"SCL"
+			]
+		},
+		{
+			"name": "Dream Cottage",
+			"source": "ThePrestige",
+			"page": 36,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a roof tile"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 12
+					}
+				}
+			],
+			"entries": [
+				"You pull together shadow substance to construct a living space dwelling of your specifications (such as a house, cabin, hut, or cottage) within a 30-foot cube, complete with furnishings and decorations of your choice. The objects inside behave as they normally would except they will vanish upon taking heavy damage or being moved outside the dwelling; the objects will immediately reappear in their original positions if they vanish. In addition, the objects inside are neither flammable, poisonous, nor edible. If the dwelling itself is damaged, it will repair itself gradually within 1 minute, avoiding any harm to real objects or creatures in the process.",
+				"You can take an action to alter the dwelling’s specifications (including the illusory objects inside), or render the dwelling {@condition invisible} (or visible if already {@condition invisible}). "
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"C"
 			]
 		},
 		{
@@ -1301,6 +1479,59 @@
 			},
 			"miscTags": [
 				"OBJ"
+			]
+		},
+		{
+			"name": "False Revival",
+			"source": "ThePrestige",
+			"page": 36,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You touch the corpse (or severed body part) of a dead creature (of Large or smaller size), and produce an illusory duplicate within 10 feet of the corpse that looks exactly as the original creature did before it died (including worn objects and subtle signs of life such as breathing). The duplicate has the movement speeds (including flight) of the original creature and can interact physically with objects, using the Strength and carrying capacity of the original creature. Illusory objects worn by the duplicate vanish if they lose contact with the duplicate.",
+				"The duplicate has an AC of 10 + your Dexterity modifier, and is destroyed on a single hit. It ignores all other damage and effects. If the duplicate moves more than 30 feet away from you, the spell ends and the duplicate vanishes.",
+				"On each of your turns, you can use a bonus action to mentally command the duplicate you made with this spell. The duplicate acts on your initiative, moving where you will it to. The duplicate can only move; if no commands are given, it will stay still unless it is attacked, at which point it will attempt to escape from hostile creatures. The duplicate can not attack but if the original creature was able to speak or make sounds, the duplicate can speak any words or make any sounds that you mentally command it to, sounding exactly like the original creature."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"SMN"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
