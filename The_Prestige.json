@@ -17,8 +17,8 @@
 				"color": "#4169e1"
 			}
 		],
-		"dateAdded": 1700688552,
-		"dateLastModified": 1700688552
+		"dateAdded": 1700689809,
+		"dateLastModified": 1700689809
 	},
 	"spell": [
 		{
@@ -4904,6 +4904,71 @@
 			]
 		},
 		{
+			"name": "Tethered Image",
+			"source": "ThePrestige",
+			"page": 32,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "powdered gemstones worth at least 10gp",
+					"cost": 1000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				},
+				{
+					"type": "permanent",
+					"ends": [
+						"dispel"
+					]
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"An intangible illusion of a creature, object, or structure of your imagining is projected at a location you can see within range; the illusion can be no larger than a 20-foot length cube and can be set to be {@condition invisible} or suppressed until certain conditions of your choice are triggered. You can set the illusion to move up to a speed of 60 feet (including flight) in a pattern of your choice (including random patterns and changes of speed) within 120 feet of the target location, which can also be set to be triggered by circumstances of your choice. If this spell is cast as a ritual, you can replace the material component with powdered gemstones worth at least 100 gp to make the spell permanent until dispelled. "
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"SGT",
+				"PRM"
+			]
+		},
+		{
 			"name": "Tiny Clone",
 			"source": "ThePrestige",
 			"page": 20,
@@ -5096,6 +5161,64 @@
 			]
 		},
 		{
+			"name": "Torturous Deception",
+			"source": "ThePrestige",
+			"page": 32,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You take control of a weakened creature’s senses (the creature must be at 10 hit points or less), making them experience an environment which makes the target feel tense, upset, or agitated. You may also have the target perceive you as another creature of your choice or imagining; you can change form in the illusion as a bonus action. The target can make a Charisma saving throw whenever it ends its turn. After three consecutive successful saves, the spell ends. As a bonus action, you can cause yourself to perceive the environment as the target perceives it, as if both of you are in the same illusory location together (another bonus action shifts your senses back to normal). If the distance between you and the target exceeds 30 feet, the spell ends."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"savingThrow": [
+				"charisma"
+			],
+			"miscTags": [
+				"UBA"
+			]
+		},
+		{
 			"name": "Transient Shackles",
 			"source": "ThePrestige",
 			"page": 25,
@@ -5225,6 +5348,71 @@
 			]
 		},
 		{
+			"name": "Untraceable Trail",
+			"source": "ThePrestige",
+			"page": 32,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 2
+					}
+				},
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You and up to eight willing creatures within 5 feet of you have your trails disguised by illusion to deter trackers from following. The footprints and other traces of movement (including odors, hairs, or drops of blood) left behind by the affected creatures during the past 10 minutes become impossible to detect by nonmagical means until the spell ends.",
+				"If this spell is cast as a ritual, the duration increases to 8 hours."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
 			"name": "Vengeful Accusers",
 			"source": "ThePrestige",
 			"page": 38,
@@ -5280,6 +5468,71 @@
 			"savingThrow": [
 				"wisdom",
 				"charisma"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Vertigo",
+			"source": "ThePrestige",
+			"page": 32,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You cause one Large or smaller creature you can see within range to see the world twist around it and to experience unsettling sensations that disrupt its balance. The creature must make a Wisdom saving throw. On a failed save, it falls {@condition prone} and has disadvantage on attack rolls, Dexterity ability checks and Dexterity saving throws until the start of its next turn."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"abilityCheck": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SGT"
 			],
 			"areaTags": [
 				"ST"
@@ -5598,6 +5851,66 @@
 					}
 				]
 			}
+		},
+		{
+			"name": "Zone of Discretion",
+			"source": "ThePrestige",
+			"page": 32,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"A zone of sound-twisting illusion is projected up to 30 feet from you, moving with you and protecting your conversation from being overheard. The words spoken by you and creatures of your choice within the zone can not be heard by other creatures, even if one of the creatures screams."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"R"
+			]
 		},
 		{
 			"name": "Zone of Invisibility",
