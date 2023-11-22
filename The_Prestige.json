@@ -17,8 +17,8 @@
 				"color": "#4169e1"
 			}
 		],
-		"dateAdded": 1700623348,
-		"dateLastModified": 1700623348
+		"dateAdded": 1700625306,
+		"dateLastModified": 1700625306
 	},
 	"spell": [
 		{
@@ -1835,6 +1835,78 @@
 			]
 		},
 		{
+			"name": "Illusory Champion",
+			"source": "ThePrestige",
+			"page": 37,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You create a solid illusory construct that follows your mental commands. The construct has the stats of a Knight (Monster Manual - Appendix B) except it is a construct instead of a humanoid, it is immune to the {@condition charmed}, {@condition frightened}, {@condition petrified}, and {@condition stunned} conditions, it is unaligned, it can’t use the Leadership action, and it has no personality, memories, or ability to speak. The construct’s outward appearance is as you imagine it to be, within reason. If the construct’s hit points are reduced to 0 or when the spell ends, the construct vanishes along with all of its illusory equipment.",
+				"On each of your turns, you can use a bonus action to mentally command the construct you made with this spell. The construct acts on your initiative, taking actions and moving where you will it to. A general command such as guarding a creature, object, or location can be given, which the construct will continue following until you give it a different command. If no commands are given, the construct will only defend itself against hostile creatures."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a slot of 6th level or higher, you create one additional construct, and with a slot of 8th level or higher, you create two additional constructs. You can mentally command only a single construct for a specific action, but a general command can be given to all constructs (within 30 feet) simultaneously"
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"SMN",
+				"UBA"
+			]
+		},
+		{
 			"name": "Illusory Gathering",
 			"source": "ThePrestige",
 			"page": 44,
@@ -3043,6 +3115,59 @@
 			}
 		},
 		{
+			"name": "Phantasmagoria",
+			"source": "ThePrestige",
+			"page": 37,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a prehnite worth at least 10 gp for you and every creature affected by the spell)"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"You and up to eight willing creatures within range enter into a deep slumber, in which you are able to communicate with each other in an enclosed dreamscape, a shared lucid dream that can not be intruded upon. The initial environment that all participants arrive in is whatever you choose to imagine. Every participant can shape the reality of the dreamscape as they imagine, and can share both thoughts and memories in audial and visual form. When the spell ends, all the participants in the dream wake up, refreshed as if having taken a short rest or long rest (depending on how long they were in the dream together).",
+				"You can take an action to end the spell. Creatures affected by this spell can not harm each other in the dream; any attempt to do so will end the spell. "
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
 			"name": "Phantom Assault",
 			"source": "ThePrestige",
 			"page": 20,
@@ -3384,6 +3509,151 @@
 			],
 			"savingThrow": [
 				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Project Message",
+			"source": "ThePrestige",
+			"page": 37,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "miles",
+					"amount": 500
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You create an intangible, illusory duplicate of yourself that appears within an unoccupied space within sight and hearing of a creature that you are familiar with. The duplicate can make gestures freely, but can not move more than 5 feet from its original position. The duplicate is able to speak aloud one message of your choice, for up to 1 minute (the message is recorded as part of the casting). When the spell ends, the duplicate vanishes."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a slot of 5th level or higher, then you can double the range per level higher than 4th (ex. 2,000 miles at 6th level)."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Selective Invisibility",
+			"source": "ThePrestige",
+			"page": 37,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a colored glass lens"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"A creature you touch becomes {@condition invisible} to all creatures except creatures that fulfill a condition of your choice, chosen during the casting of this spell. You may take an action to make the target visible to creatures of your choice even if they do not fulfill the conditions specified during the spell’s casting. Anything that the target is wearing or carrying is {@condition invisible} as long as it is on the target’s person. The spell ends if the target attacks or casts a spell."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a slot of 5th level or higher, then you can add an additional target per level higher than 4th."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"conditionInflict": [
+				"invisible"
 			],
 			"areaTags": [
 				"ST"
