@@ -17,8 +17,8 @@
 				"color": "#4169e1"
 			}
 		],
-		"dateAdded": 1700618425,
-		"dateLastModified": 1700618425
+		"dateAdded": 1700619965,
+		"dateLastModified": 1700619965
 	},
 	"spell": [
 		{
@@ -1362,6 +1362,72 @@
 			]
 		},
 		{
+			"name": "Fraudulent Victory",
+			"source": "ThePrestige",
+			"page": 41,
+			"level": 5,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"A mental trap is placed in the mind of one creature you can see within range; the target must make a Wisdom saving throw. On a failed save, the next time the target makes an attack or takes any other action that would harm other creatures, the target instead takes no action on its turn (but still moves normally). An illusion of successfully performing the desired action is created in the target’s mind that appears real to the target, effectively rendering all creatures that would have been affected by the target’s action {@condition invisible} and silent to the target.",
+				"After being affected by the illusion, the target must make a Wisdom saving throw at the end of each turn it takes; on a successful save, the spell ends, and the illusion is broken. If the target somehow detects or is notified about the inconsistency of the reality experienced while affected by this spell, the target can make an immediate Wisdom saving throw to break the illusion (this is not counted towards the target’s saving throw for its turn).",
+				"If the target takes damage or is affected by other magical effects, this spell ends, and the illusion is broken."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
 			"name": "Garble Text",
 			"source": "ThePrestige",
 			"page": 27,
@@ -1461,6 +1527,67 @@
 					},
 					{
 						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"OBJ"
+			]
+		},
+		{
+			"name": "Hide Surroundings",
+			"source": "ThePrestige",
+			"page": 41,
+			"level": 5,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 100
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You render all objects and structures (or parts of them) of your choice within a 30-foot sphere {@condition invisible} until the spell ends. If any of the affected objects are moved or destroyed somehow, they (or their remains) become visible.",
+				"If you cast this spell as a ritual, you can have it maintained without {@status concentration}."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
 						"source": "PHB"
 					}
 				]
@@ -1895,6 +2022,70 @@
 			]
 		},
 		{
+			"name": "Mass Image",
+			"source": "ThePrestige",
+			"page": 41,
+			"level": 5,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You create numerous illusory duplicates of yourself that constantly shift around randomly within the bounds of a 30-foot radius circle; the affected area is centered on the location from which you cast this spell. Physical interaction with a duplicate reveals it to be an illusion. If you move from your current location, you can make an Intelligence (Stealth) check to hide within the affected area; you gain a +10 bonus to this check. You can use your action to dismiss the illusory duplicates.",
+				"A creature attempting to make an attack against you while you are within the affected area must make an Intelligence saving throw. On a failed save, the attacker automatically misses. On a successful save, the attacker makes the attack with disadvantage. If the attack hits, you can roll a 6 or higher on a {@dice d20} to have it hit one of your duplicates instead.",
+				"A duplicate’s AC equals 10 + your Dexterity modifier, and it is destroyed on a hit. It ignores all other damage and effects. If 15 or more duplicates are destroyed, the spell ends.",
+				"The duplicates make no sound, so creatures that can not see are unaffected by the spell. Senses other than sight (such as blindsight) or the ability to perceive illusions as false (as with truesight) will also make a creature unaffected by this spell."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"savingThrow": [
+				"intelligence"
+			],
+			"abilityCheck": [
+				"dexterity"
+			],
+			"areaTags": [
+				"R"
+			]
+		},
+		{
 			"name": "Merciful Lie",
 			"source": "ThePrestige",
 			"page": 28,
@@ -2181,7 +2372,7 @@
 				"intelligence"
 			],
 			"areaTags": [
-				"S"
+				"R"
 			]
 		},
 		{
@@ -2795,6 +2986,60 @@
 			],
 			"areaTags": [
 				"ST"
+			]
+		},
+		{
+			"name": "Phantom Stage",
+			"source": "ThePrestige",
+			"page": 41,
+			"level": 5,
+			"school": "I",
+			"time": [
+				{
+					"number": 10,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a wrench, hammer, or screwdriver"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 12
+					}
+				}
+			],
+			"entries": [
+				"You pull together shadow substance to construct a raised platform structure of your specifications, complete with furnishings and decorations of your choice. The structure can be shaped as you imagine, so long as it fits within a 100-ft. length cube, and can have a complex architecture, including mechanisms such as curtain systems, trap doors, or sliding scenery walls. If the structure itself is damaged, it will repair itself gradually within 1 minute, avoiding any harm to real objects or creatures in the process. In addition, the materials used for the structure are neither flammable, poisonous, nor edible.",
+				"The objects produced for the structure behave as they normally would except they will vanish upon taking heavy damage or being moved more than 30 feet away from the structure; the objects will immediately reappear in their original positions if they vanish. In addition, the objects produced are neither flammable, poisonous, nor edible.",
+				"You can take an action to alter the structure’s specifications (including the illusory objects inside or upon it), or render the structure {@condition invisible} (or visible if already {@condition invisible}). "
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"C"
 			]
 		},
 		{
