@@ -17,8 +17,8 @@
 				"color": "#4169e1"
 			}
 		],
-		"dateAdded": 1700616126,
-		"dateLastModified": 1700616126
+		"dateAdded": 1700617360,
+		"dateLastModified": 1700617360
 	},
 	"spell": [
 		{
@@ -928,6 +928,60 @@
 			]
 		},
 		{
+			"name": "Fantastic Mount",
+			"source": "ThePrestige",
+			"page": 43,
+			"level": 6,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a wing or feather from a beast"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"A Huge quasi-real winged creature appears on the ground in an unoccupied space of your choice within range. The creature’s appearance is as you imagine (such as a dragon, wyvern, griffon, or roc), and it may come with tethers strapped to its back which creature can hold onto. Any of the equipment created by the spell vanishes if moved more than 10 feet away from the mount.",
+				"The mount has a speed of 60 feet, and a fly speed of 120 feet. If used for travel, the mount moves about 14 miles per hour on land (18 with a fast pace), and 28 miles per hour in flight (50 with a fast pace). The mount’s flight is magical in nature, and it can hover in midair.",
+				"The mount can carry up to 3,000 lb. and still fly.",
+				"The mount’s AC equals 10 + your Spellcasting ability modifier, and it is destroyed on a hit. It ignores all other damage and effects.",
+				"The mount can take no actions other than moving; you can take a bonus action to mentally command the mount to move in the direction you choose, to stop, speed up, or slow down. If the mount or those riding on it would be in danger from an obstacle, you can take a reaction to adjust the mount’s course of movement. If you take an action to focus on mentally directing the mount, you do not need to take a reaction or bonus action to direct the mount.",
+				"The spell ends if you take an action to dismiss the mount or if it takes damage"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"SMN",
+				"UBA"
+			]
+		},
+		{
 			"name": "Far Screen",
 			"source": "ThePrestige",
 			"page": 27,
@@ -1057,6 +1111,63 @@
 			"areaTags": [
 				"ST"
 			]
+		},
+		{
+			"name": "Field of Decoys",
+			"source": "ThePrestige",
+			"page": 43,
+			"level": 6,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Eight illusory duplicates of yourself appear, each one in an unoccupied space you can see within range. Until the spell ends, you can take a bonus action on each of your turns to teleport, swapping positions with one of the duplicates, as long as the duplicate is within 30 feet of you. The swapping is performed seamlessly as to produce no signs of teleportation.",
+				"When the spell ends, the duplicates vanish.",
+				"Each duplicate’s AC equals 10 + your Dexterity modifier, and it is destroyed on a hit. The duplicates ignore all other damage and effects. Each duplicate can take no actions other than moving; you can take a bonus action to mentally command some or all of the illusory duplicates move up to your speed.",
+				"NOTE: It is recommended that you and each duplicate be given a different number and that the number be written down secretly, revealing it when it is necessary to prove which duplicate you swapped positions with."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
 		},
 		{
 			"name": "Fraudulent Resizing",
@@ -2254,6 +2365,60 @@
 			]
 		},
 		{
+			"name": "Perfect Counterfeit",
+			"source": "ThePrestige",
+			"page": 43,
+			"level": 6,
+			"school": "I",
+			"time": [
+				{
+					"number": 10,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"By pulling together shadow substance, you create an exact duplicate of one object or structure that you touch, which appears in a visible, unoccupied space of your choice within 30 feet of the original, set on the ground. The object or structure can not be heavier than 10,000 lb., must be made entirely of solid materials, and vanishes when the spell ends.",
+				"This spell can be used to duplicate a non-illusory magic item or magical structure, of up to Rare quality. The duplicate functions exactly the same as the copied original, except for any effects applied to the original outside of its designed functions.",
+				"If the object or structure being duplicated possesses an intelligence or soul of some sort, this spell does not duplicate that aspect of the target, or any properties dependent on it."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a 8th level slot or higher, then you can duplicate a Very Rare quality magic item or magical structure."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
 			"name": "Persistent Message",
 			"source": "ThePrestige",
 			"page": 30,
@@ -3225,6 +3390,65 @@
 			],
 			"areaTags": [
 				"S"
+			]
+		},
+		{
+			"name": "Wall of Misdirection",
+			"source": "ThePrestige",
+			"page": 43,
+			"level": 6,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a soot-covered poisonous mushroom"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"A wall of swirling multi-colored mist, flashing lights, and strange images from your imagination appears in unoccupied space within range. Creatures within the wall are inundated with false sensations and a warping of their sense of direction. The wall appears in any orientation you choose: horizontally, vertically, or diagonally. It can be free floating, or it can rest on a solid surface. The wall can be up to 40 feet long, 20 feet high, and 10 feet thick. The wall blocks line of sight, but creatures and objects can pass through it.",
+				"Whenever a creature enters or moves 5 feet through the wall’s affected area, it must make a Wisdom saving throw. On a failed save, the creature can only move in the opposite direction for their next 5 feet of movement."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"FMV",
+				"OBS"
 			]
 		},
 		{
