@@ -17,8 +17,8 @@
 				"color": "#4169e1"
 			}
 		],
-		"dateAdded": 1700626312,
-		"dateLastModified": 1700626312
+		"dateAdded": 1700627301,
+		"dateLastModified": 1700627301
 	},
 	"spell": [
 		{
@@ -3954,6 +3954,65 @@
 			]
 		},
 		{
+			"name": "Shadow Appendage",
+			"source": "ThePrestige",
+			"page": 35,
+			"level": 3,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "a tourmaline worth at least 50 gp, which the spell consumes",
+					"consume": true,
+					"cost": 5000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 12
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You cause a solid illusory finger, toe, hand, foot, arm or leg to appear at the stump of a creature whose corresponding body part was lost. The illusory part looks exactly like the part that it is replacing and functions as if it were the original, including dextrous manipulation and sensation. If the illusory part is heavily damaged or is somehow separated from the body, the spell ends. when the spell ends, the illusory part vanishes. Minor injuries to the part appear to heal within seconds, and it neither bleeds nor is actually connected to the rest of the creature’s body (it simply functions as if it were).",
+				"If this spell is cast as a ritual, tourmalines worth a total of at least 500 gp can be used as the material component to make the illusion permanent until dispelled."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
 			"name": "Shadow Bridge",
 			"source": "ThePrestige",
 			"page": 42,
@@ -4281,6 +4340,51 @@
 			]
 		},
 		{
+			"name": "Sky Paint",
+			"source": "ThePrestige",
+			"page": 35,
+			"level": 3,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "sight"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You create a still, intangible 2-dimensional image that appears in a part of the sky you can see. The image can be anything you can imagine, and can be as wide as 100 feet. Creatures that closely approach the image can easily recognize it as an illusion. You can take an action to change the image to any other image you can imagine."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
 			"name": "Storm of Clones",
 			"source": "ThePrestige",
 			"page": 45,
@@ -4331,6 +4435,61 @@
 			"miscTags": [
 				"SMN"
 			]
+		},
+		{
+			"name": "Storyteller’s Emergence",
+			"source": "ThePrestige",
+			"page": 35,
+			"level": 3,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You point your finger at written text in a single book, scroll, or on a patch of surface no larger than 100 feet in any direction is made to appear as if written in a language known by the reader (other types of writing medium may be targeted, at the DM’s discretion). An intangible illusory duplicate(s) of the target text’s author(s) appears within an unoccupied space of your choice within 30 feet of the text and begins to speak the written text aloud from beginning to end (up to the maximum safe volume for listeners). The duplicate’s appearance is randomly chosen from however the author appeared while writing or dictating the text.",
+				"The duplicate speaks the written text in completion even if parts of it are damaged or missing. You can take an action to stop the spoken text, move it back to an earlier part, or move it forward as much as you desire. When the spell ends, the duplicate vanishes. "
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
 		},
 		{
 			"name": "Sudden Displacement",
@@ -4574,6 +4733,64 @@
 				"SMN",
 				"OBS",
 				"OBJ"
+			]
+		},
+		{
+			"name": "Topsy Turvy",
+			"source": "ThePrestige",
+			"page": 35,
+			"level": 3,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You create a brief sensory distortion within a 15-foot radius sphere, making creatures within it see the world twist around them and experience unsettling sensations that disrupt their balance. Every creature within the affected area must also make a Wisdom saving throw. On a failed save, a creature falls {@condition prone} and has disadvantage on attack rolls, Dexterity ability checks and Dexterity saving throws until the start of its next turn."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -4961,6 +5178,56 @@
 				"FMV",
 				"OBS"
 			],
+			"areaTags": [
+				"W"
+			]
+		},
+		{
+			"name": "Wall of Reflection",
+			"source": "ThePrestige",
+			"page": 35,
+			"level": 3,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "turn",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You create a mirror-like illusory wall in unoccupied space within range. The wall appears in any orientation you choose: horizontally, vertically, or diagonally. It can be free floating, or it can rest on a solid surface. The wall can be up to 60 feet long, 30 feet high, and 1 inch thick. You can choose to have the wall be reflective on one side or both sides; if the wall is only reflective on one side then it is transparent to the other side. Creatures and objects can pass through the wall.",
+				"The reflective nature of the wall may repel certain types of effects related to light (at the DM’s discretion), such as blinding light or beams of light. To a viewer on the transparent side of a one-sided wall, blinding light will appear as if filling the other side of the wall with the hue of the light, extending beyond the wall on the transparent side as bright light."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
 			"areaTags": [
 				"W"
 			]
