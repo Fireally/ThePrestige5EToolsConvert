@@ -17,8 +17,8 @@
 				"color": "#4169e1"
 			}
 		],
-		"dateAdded": 1700627301,
-		"dateLastModified": 1700627301
+		"dateAdded": 1700688552,
+		"dateLastModified": 1700688552
 	},
 	"spell": [
 		{
@@ -3818,6 +3818,245 @@
 			]
 		},
 		{
+			"name": "Replay Crystal",
+			"source": "ThePrestige",
+			"page": 31,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "round"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "permanent",
+					"ends": [
+						"dispel"
+					]
+				}
+			],
+			"entries": [
+				"You touch a wieldable crystal object and store within it a recording of everything you can see and hear while you cast this spell (the casting time can be extended up to 8 hours); after the first round of casting, the recording begins. Only one recording (up to 8 hours long) can be stored per object, and until dispelled, the spell displays the recording visibly within the object; the recording is played on an infinite loop unless the wielder takes an action to set the play to a particular moment of the recording. The wielder can take a bonus action to have the crystal emit (or stop emitting) sound that was recorded along with the visual recording, up to a desired volume no louder than a humanoid’s nonmagical scream. The quality of the image will vary based on the size and transparency of the object."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"PRM",
+				"UBA",
+				"OBJ"
+			]
+		},
+		{
+			"name": "Reverse Perspective",
+			"source": "ThePrestige",
+			"page": 31,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a mirror"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You cause one creature you can see within range to perceive all creatures, objects, structures, environmental features, and movement in sight (from the moment the spell is cast) as if they were oriented in the opposite direction (flipped vertically or horizontally at the caster’s choice). The target must make a Wisdom saving throw; on a failed save, until the spell ends, the target has disadvantage on all attack rolls, Perception checks involving sight, and Dexterity saving throws made against effects that must be seen to avoid. In addition, on a failed save, until the spell ends, attacks made against the target have advantage.",
+				"The target can make an Intelligence saving throw at the end of each of its turns. On a successful save, the target adjusts to the reversed perspective, suppressing the applied penalties of the spell until the end of its next turn.",
+				"Creatures with the {@condition blinded} condition are also immune to this spell’s effect while they are {@condition blinded}. "
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SGT",
+				"ADV"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Scare Trap",
+			"source": "ThePrestige",
+			"page": 31,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "special"
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You install an {@condition invisible} psychic echo in an unoccupied 5-foot space within range. The next time a Large or smaller creature moves through the affected space, the creature sees the illusion of getting caught in a trap, such as falling into a spiked pit, or crushed between closing walls. The creature must make a Wisdom saving throw. On a failed save, roll {@dice 6d12} (this is not actual damage, but rather the illusion of damage so it can not be reduced in any way). If the resulting number is more than half the creature’s current hit point value, the creature falls {@condition prone}. If the resulting number is equal to or greater than the creature’s entire current hit point value, the creature falls {@condition prone} and is {@condition incapacitated} until the end of its next turn. After the psychic echo is triggered, the spell ends.",
+				"Creatures that are immune to the {@condition frightened} condition or {@condition stunned} condition are unaffected by this spell."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Selective Image",
+			"source": "ThePrestige",
+			"page": 31,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You project an image of your imagining within range that is no larger than a 10-foot radius sphere; only creatures of your choice can see this illusion and the illusion can create sounds that only creatures of your choice can hear (up to the maximum volume that is safe for the listeners). The creatures chosen to see and hear the illusion must be within your line of sight. Chosen creatures might not be able to hear the illusion if they are too far away."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
 			"name": "Selective Invisibility",
 			"source": "ThePrestige",
 			"page": 37,
@@ -4383,6 +4622,69 @@
 					}
 				]
 			}
+		},
+		{
+			"name": "Stirring Image",
+			"source": "ThePrestige",
+			"page": 31,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You invoke the memories of one creature you can see within range, causing them to experience an emotionally moving vision of their past, perhaps a moment of triumph or tragedy; the vision raises the target’s morale, granting the target advantage on death saving throws, Strength ability checks, Strength saving throws, Charisma ability checks, and Charisma saving throws until the end of its next turn. "
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"abilityCheck": [
+				"strength",
+				"charisma"
+			],
+			"miscTags": [
+				"SGT",
+				"OBJ"
+			],
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "Storm of Clones",
