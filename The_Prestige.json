@@ -17,8 +17,8 @@
 				"color": "#4169e1"
 			}
 		],
-		"dateAdded": 1700619965,
-		"dateLastModified": 1700619965
+		"dateAdded": 1700620883,
+		"dateLastModified": 1700620883
 	},
 	"spell": [
 		{
@@ -350,6 +350,65 @@
 			"areaTags": [
 				"S"
 			]
+		},
+		{
+			"name": "Communication Circle",
+			"source": "ThePrestige",
+			"page": 40,
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "powdered gemstones worth at least 30 gp"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You draw out a circle of glyphs and sigils with a 5 foot radius as part of the casting of this spell. When the spell activated, the circle begins to glow, emitting bright illumination out to 15 feet and dim illumination for another 15 feet. While the spell is active, a creature standing within the circle can mentally command the circle to request a connection with another existing circle within the same plane, if they know the location of the other circle (or at least the general area where it is located, within a 1000-foot radius). If there is more than one communication circle in the desired area, then the creature initiating the connection acquires a mental image of all the different circles’ locations and can choose one of them.",
+				"After the request for connection is made, another creature must accept the request at the other circle’s location (or within 30 feet of it); request acceptance may have different conditions such as a spoken password or touching the inside of the circle while making a mental command (chosen by the caster). If the connection is successful, the other circle glows with activation and the creature that initiated the connection can choose one of the following options, which is made known to the receiver before the request is accepted (usually by the way the circle glows, pulsates, or sounds).",
+				{
+					"type": "list",
+					"items": [
+						"Creatures standing in one circle can verbally communicate with creatures standing in the other circle. The initiator of the connection may request to include visual input in the connection, and if the receiver at the other circle accepts the request, the creatures at each circle see the environment around them transition into a misty gray void; intangible illusory images of the creatures and the circles that they are standing on appear in the void, within 10 feet of each other, and visible to each creature in both circles. The images move just as the creatures in the circles move. The creatures in the circles have not actually moved anywhere but can only see or hear each other in the illusion of the void; to creatures outside of the circles, the creatures inside the circles appear to be speaking without sound to an unseen listener",
+						"An intangible illusory image of the creature initiating the connection appears standing on the other circle; the image moves just as the initiator moves. The creature initiating the connection sees the environment around transform into a view of the environment around the other circle, and can communicate with creatures near the other circle’s location as if actually standing on the other circle."
+					]
+				},
+				"The connection can be ended by creatures as a bonus action at either end with a spoken password or mental command given while standing on a circle, at which point the spell ends. If there are no creatures in a circle for more than 1 minute, the spell ends.",
+				"If this spell is cast as a ritual, the required cost of the material component increases to 300 gp (doubled every time 5 feet is added to the radius - ex. 2,400 gp for 20-ft. radius), and the circle becomes permanently active (but only glows when used). A permanent circle can connect with multiple circles at the same time if desired, and instead of the spell ending for a permanent circle, connections are cut."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
 		},
 		{
 			"name": "Counter Clone",
@@ -934,6 +993,70 @@
 			"savingThrow": [
 				"intelligence",
 				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Erase Presence",
+			"source": "ThePrestige",
+			"page": 40,
+			"level": 5,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a tiger’s eye worth at least 50 gp"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"A creature that you touch becomes {@condition invisible}, no longer makes sound while moving or taking actions (including footsteps and touching objects), and gains immunity to divination, telepathy, and scrying until the spell ends. Anything that the target is wearing or carrying also becomes {@condition invisible}, no longer makes sound, and gains immunity to divination, telepathy, and scrying (unless equivalent to spells cast with a spell slot higher than the slot spent to cast this spell) until the spell ends. All magical effects applied to the target, including this spell, are immune to detection from divination or scrying. If the target makes an attack or casts a spell, the spell ends."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"conditionInflict": [
+				"invisible"
 			],
 			"areaTags": [
 				"ST"
