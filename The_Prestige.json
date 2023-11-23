@@ -17,8 +17,8 @@
 				"color": "#4169e1"
 			}
 		],
-		"dateAdded": 1700696487,
-		"dateLastModified": 1700696487
+		"dateAdded": 1700716046,
+		"dateLastModified": 1700716046
 	},
 	"spell": [
 		{
@@ -2400,6 +2400,71 @@
 			]
 		},
 		{
+			"name": "Hide Object",
+			"source": "ThePrestige",
+			"page": 28,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 100
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "an opaque piece of cloth)"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You render one object or structure no larger than a 20-foot cube {@condition invisible} until the spell ends. If the target is moved or destroyed, the spell ends. If you cast this spell as a ritual, you can have it maintained without {@status concentration}."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"OBJ"
+			]
+		},
+		{
 			"name": "Hide Surroundings",
 			"source": "ThePrestige",
 			"page": 41,
@@ -2661,6 +2726,78 @@
 			],
 			"areaTags": [
 				"ST"
+			]
+		},
+		{
+			"name": "Illusory Obstruction",
+			"source": "ThePrestige",
+			"page": 28,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You create an opaque, illusory wall in unoccupied space within range, made of solidified shadow substance (the cosmetic appearance of the wall may be to your imagining). The wall appears in any orientation you choose: horizontally, vertically, or diagonally. It can be free floating, or it can rest on a solid surface. ",
+				"The wall disappears when the spell ends.",
+				"The wall can be up to 15 feet long, 15 feet high, and 1 foot thick. It blocks line of sight, has an AC of 15, 20 hit points per inch of thickness, and has resistance to nonmagical bludgeoning, piercing, and slashing damage."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a slot of 3rd level or higher, you can produce an additional wall per level higher than 2nd, arranging and placing each wall as you desire. You can combine the wall segments to produce larger walls."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"W"
 			]
 		},
 		{
@@ -3517,6 +3654,75 @@
 			],
 			"areaTags": [
 				"ST"
+			]
+		},
+		{
+			"name": "One-Way Transparency",
+			"source": "ThePrestige",
+			"page": 29,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You alter the images shown on the surface of one or more transparent/translucent objects or structures of your choice (such as windows or a body of water) within an area no larger than a 20-foot radius sphere. One side of your choice on all of the affected objects or structures becomes opaque, translucent, or reflective until the spell ends."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"miscTags": [
+				"OBJ"
 			]
 		},
 		{
